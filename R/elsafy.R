@@ -16,6 +16,7 @@
 #' }
 #'
 #' @seealso \code{\link{de_elsafy}}
+#' @importFrom miner getPlayerPos getBlocks setBlock
 #' @export
 elsafy <- function(player_id=NULL, water=c(8, 9), ice=174, delay=0.02)
 {
