@@ -2,3 +2,5 @@
 
 export(de_elsafy)
 export(elsafy)
+export(mc_whoami)
+importFrom(miner,getChatPosts)
