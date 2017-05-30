@@ -1,6 +1,6 @@
 ## miner.extra
 
-[![Travis-CI Build Status](https://travis-ci.org/ROpenSciLabs/miner.extra.svg?branch=master)](https://travis-ci.org/ROpenSciLabs/miner.extra>)
+[![Travis-CI Build Status](https://travis-ci.org/ROpenSciLabs/miner.extra.svg?branch=master)](https://travis-ci.org/ROpenSciLabs/miner.extra)
 
 The [miner R package](https://github.com/ROpenSciLabs/miner) makes it
 possible to interact with [Minecraft](https://minecraft.net) from
