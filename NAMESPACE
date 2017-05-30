@@ -3,6 +3,7 @@
 export(de_elsafy)
 export(elsafy)
 export(mc_whoami)
+importFrom(miner,chatPost)
 importFrom(miner,getBlocks)
 importFrom(miner,getChatPosts)
 importFrom(miner,getPlayerPos)

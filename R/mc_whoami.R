@@ -7,7 +7,7 @@
 #'
 #' @return A vector of player IDs
 #'
-#' @importFrom miner getChatPosts
+#' @importFrom miner getChatPosts chatPost
 #' @export
 #'
 #' @details Uses \code{\link[base]{grepl}}, ignoring case, to look for
@@ -36,7 +36,7 @@ mc_whoami <- function(delay=1, max_time = Inf)
             result <- c(result, players)
 
             for(player in players) {
-                chatPost(paste0("You are ", player, "."))
+                miner::chatPost(paste0("You are ", player, "."))
                 message("You are ", player, ".")
                 Sys.sleep(delay)
             }
