@@ -1,0 +1,21 @@
+Package: miner.extra
+Title: Extra Functions to Control Minecraft with RaspberryJuice API
+Version: 0.1.1
+Date: 2017-05-30
+Authors@R: c(
+    person("Karl",    "Broman",   role = c("aut", "cre"), email = "kbroman@biostat.wisc.edu"),
+    person("Brooke",  "Anderson", role="aut"),
+    person("Gergely", "Daróczi",  role="aut"),
+    person("Ali",     "Zaidi",    role="aut"),
+    person("Mario",   "Inchiosa", role="aut"),
+    person("David",   "Smith",    role="aut")
+    )
+Description: Extra functions to illustrate the use of the miner package to control Minecraft with the RaspberryJuice API.
+Depends: R (>= 3.1.0)
+Suggests: miner
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/ROpenSciLabs/miner.extra
+BugReports: https://github.com/ROpenSciLabs/miner.extra/issues
+RoxygenNote: 6.0.1
