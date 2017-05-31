@@ -20,13 +20,7 @@ render_bitmap <- function(bitmap, bottomleft, id, style=0,
     z0 <- bottomleft[3]
 
     # check that (dir,top) pair is valid
-    dir_pairs <- list(c("north", "south"),
-                      c("east", "west"),
-                      c("up", "down"))
-    for(i in seq_along(dir_pairs)) {
-        if(dir %in% dir_pairs[[i]] && top %in% dir_pairs[[i]])
-            stop("Can't have dir==\"", dir, '" and top=="', top, '"')
-    }
+    check_dirtop(dir, top)
 
     # east =  positive x   west =  negative x
     # up =    positive y   down =  negative y
