@@ -12,6 +12,13 @@
 #'
 #' @return None
 #'
+#' @examples
+#' \dontrun{
+#' library(miner)
+#' v <- getPlayerPos()
+#' write_text("Hello!", v+c(5,3,0), font="4x8")
+#' }
+#'
 #' @export
 write_text <- function(text,
                        bottomleft,

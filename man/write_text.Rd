@@ -30,3 +30,11 @@ None
 \description{
 Write some text in minecraft, using blocks
 }
+\examples{
+\dontrun{
+library(miner)
+v <- getPlayerPos()
+write_text("Hello!", v+c(5,3,0), font="4x8")
+}
+
+}
