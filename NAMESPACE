@@ -2,6 +2,7 @@
 
 export(de_elsafy)
 export(elsafy)
+export(mc_Reval)
 export(mc_whoami)
 export(write_text)
 importFrom(miner,chatPost)
