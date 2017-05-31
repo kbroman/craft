@@ -20,6 +20,7 @@
 #' bad things.
 #'
 #' @importFrom miner getChatPosts chatPost
+#' @importFrom utils capture.output
 #' @export
 #'
 #' @examples
@@ -49,7 +50,7 @@ mc_Reval <- function(player_id=NULL, delay=1)
             output <- eval(parse(text=line), envir=.GlobalEnv)
 
             if(!is.null(output)) {
-                printed_output <- paste(capture.output( output ), collapse="\n")
+                printed_output <- paste(utils::capture.output( output ), collapse="\n")
                 print(printed_output)
                 if(length(printed_output) > 0) {
                     for(line in printed_output) {
