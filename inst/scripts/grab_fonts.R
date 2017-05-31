@@ -77,7 +77,7 @@ library(imager)
 font_sets <- vector("list", length(font_charsets))
 names(font_sets) <- names(font_charsets)
 for(i in seq_along(font_sets))
-    font_sets[[i]] <- list(charset=font_charsets[i],
+    font_sets[[i]] <- list(charset=font_charsets[[i]],
                            png=grayscale(load.image(font_urls[i]))[,,1,1])
 
 save(font_sets, file="../../data/font_sets.RData")
