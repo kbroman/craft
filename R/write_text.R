@@ -3,7 +3,7 @@
 #' Write some text in minecraft, using blocks
 #'
 #' @param text A character string to be written in blocks
-#' @param bottomleft Vector of length 3 representing the location for the lower-left corner for the text.
+#' @param lowerleft Vector of length 3 representing the location for the lower-left corner for the text.
 #' @param font Font size to use
 #' @param id Block type to use to write the text
 #' @param style Block style to use to write the text
@@ -21,7 +21,7 @@
 #'
 #' @export
 write_text <- function(text,
-                       bottomleft,
+                       lowerleft,
                        font=c("4x5", "4x6", "4x8", "6x6", "8x6",
                               "4x12", "6x12", "8x12", "8x16", "16x16"),
                        id=1,
@@ -34,6 +34,6 @@ write_text <- function(text,
     top <- match.arg(top)
 
     bmp <- char2bitmap(text, font)
-    render_bitmap(bmp, bottomleft, id, style, dir, top)
+    render_bitmap(bmp, lowerleft, id, style, dir, top)
 
 }

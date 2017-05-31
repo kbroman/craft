@@ -4,7 +4,7 @@
 \alias{write_text}
 \title{Write text in minecraft}
 \usage{
-write_text(text, bottomleft, font = c("4x5", "4x6", "4x8", "6x6", "8x6",
+write_text(text, lowerleft, font = c("4x5", "4x6", "4x8", "6x6", "8x6",
   "4x12", "6x12", "8x12", "8x16", "16x16"), id = 1, style = 0,
   dir = c("north", "south", "east", "west", "up", "down"), top = c("up",
   "east", "west", "north", "south", "down"))
@@ -12,7 +12,7 @@ write_text(text, bottomleft, font = c("4x5", "4x6", "4x8", "6x6", "8x6",
 \arguments{
 \item{text}{A character string to be written in blocks}
 
-\item{bottomleft}{Vector of length 3 representing the location for the lower-left corner for the text.}
+\item{lowerleft}{Vector of length 3 representing the location for the lower-left corner for the text.}
 
 \item{font}{Font size to use}
 
