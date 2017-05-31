@@ -1,4 +1,5 @@
 # get bitmap for a given character
+#' @importFrom utils data
 char2bitmap <- function(char,
                         font=c("4x5", "4x6", "4x8", "6x6", "8x6",
                                "4x12", "6x12", "8x12", "8x16", "16x16"))
@@ -12,7 +13,7 @@ char2bitmap <- function(char,
         return(do.call("cbind", result))
     }
 
-    data(font_sets, package="miner.extra", envir=parent.frame())
+    utils::data(font_sets, package="miner.extra", envir=parent.frame())
 
     chars <- font_sets[[font]]$charset
     png <- font_sets[[font]]$png
