@@ -13,7 +13,7 @@ char2bitmap <- function(char,
         return(do.call("cbind", result))
     }
 
-    utils::data(font_sets, package="miner.extra", envir=parent.frame())
+    utils::data(font_sets, package="craft", envir=parent.frame())
 
     chars <- font_sets[[font]]$charset
     png <- font_sets[[font]]$png

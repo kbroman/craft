@@ -1,3 +1,3 @@
 library(testthat)
 
-test_check("miner.extra")
+test_check("craft")
