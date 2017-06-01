@@ -1,4 +1,4 @@
-globalVariables("font_sets", "miner.extra")
+globalVariables("font_sets", "craft")
 #' Font set data
 #'
 #' Font set data used to construct text from blocks within minecraft
