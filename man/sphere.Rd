@@ -35,6 +35,8 @@ Builds a sphere (or a truncated sphere) around the players current position. By 
 Make a solid or hollow sphere with the player at the center.
 }
 \examples{
+\dontrun{
+
 # Hollow glass sphere of size 15
 sphere(pos = c(0, 0, 0))
 
@@ -43,6 +45,7 @@ sphere(blockid = 0, pos = c(0, 0, 0))
 
 # Glass dome
 sphere(ylim = c(0, 15))
+}
 
 }
 \seealso{

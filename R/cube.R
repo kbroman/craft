@@ -21,15 +21,17 @@
 #' @seealso \code{\link{sphere}} to create a sphere.
 #'
 #' @examples
+#' \dontrun{
+#' 
 #' # Stone cube 10x10x10
 #' cube(pos = c(0, 0, 0))
-#'
+#' 
 #' # Erase cube
 #' cube(blockid = 0, pos = c(0, 0, 0))
-#'
+#' 
 #' # Stone fence
 #' cube(ylim = c(2, 3), offset = c(0, -2, 0))
-#'
+#' }
 #'
 cube <- function(
   xlen = 10, ylen = 10, zlen = 10,

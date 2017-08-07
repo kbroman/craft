@@ -40,6 +40,8 @@ Builds a cube or cuboid with the corner at the player's position. By default, th
 Make a solid or hollow cube.
 }
 \examples{
+\dontrun{
+
 # Stone cube 10x10x10
 cube(pos = c(0, 0, 0))
 
@@ -48,7 +50,7 @@ cube(blockid = 0, pos = c(0, 0, 0))
 
 # Stone fence
 cube(ylim = c(2, 3), offset = c(0, -2, 0))
-
+}
 
 }
 \seealso{

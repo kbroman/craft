@@ -19,15 +19,18 @@
 #' @seealso \code{\link{cube}} to create a cube.
 #'
 #' @examples
+#' \dontrun{
+#' 
 #' # Hollow glass sphere of size 15
 #' sphere(pos = c(0, 0, 0))
-#'
+#' 
 #' # Erase sphere
 #' sphere(blockid = 0, pos = c(0, 0, 0))
-#'
+#' 
 #' # Glass dome
 #' sphere(ylim = c(0, 15))
-#'
+#' }
+#' 
 sphere <- function(
     radius = 15,
     blockid = 20,
