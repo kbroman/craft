@@ -13,37 +13,38 @@
 #' @param ylim vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.
 #' @param zlim vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.
 #'
-#' @return Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{getPlayerPos}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
+#' @return Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
 #' @export
+#' @importFrom miner getPlayerIds getPlayerPos
 #'
 #' @seealso \code{\link{cube}} to create a cube.
 #'
 #' @examples
 #' \dontrun{
-#' 
+#'
 #' # Hollow glass sphere of size 15
 #' sphere(pos = c(0, 0, 0))
-#' 
+#'
 #' # Erase sphere
 #' sphere(blockid = 0, pos = c(0, 0, 0))
-#' 
+#'
 #' # Glass dome
 #' sphere(ylim = c(0, 15))
 #' }
-#' 
+#'
 sphere <- function(
     radius = 15,
     blockid = 20,
     styleid = 0,
     fill = FALSE,
     offset = c(0, 0, 0),
-    playerid = getPlayerIds(),
+    playerid = miner::getPlayerIds(),
     pos, xlim, ylim, zlim
 ){
 
     if(missing(pos)){
         if(length(playerid) != 1) stop("playerid must be of length one")
-        pos <- getPlayerPos(playerid, tile = TRUE)
+        pos <- miner::getPlayerPos(playerid, tile = TRUE)
     }
 
     # Create a stack of rings

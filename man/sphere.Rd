@@ -5,7 +5,8 @@
 \title{Make a sphere}
 \usage{
 sphere(radius = 15, blockid = 20, styleid = 0, fill = FALSE,
-  offset = c(0, 0, 0), playerid = getPlayerIds(), pos, xlim, ylim, zlim)
+  offset = c(0, 0, 0), playerid = miner::getPlayerIds(), pos, xlim, ylim,
+  zlim)
 }
 \arguments{
 \item{radius}{integer. Specifies the radius of the sphere.}
@@ -29,7 +30,7 @@ sphere(radius = 15, blockid = 20, styleid = 0, fill = FALSE,
 \item{zlim}{vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.}
 }
 \value{
-Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{getPlayerPos}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
+Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
 }
 \description{
 Make a solid or hollow sphere with the player at the center.
