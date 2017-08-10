@@ -8,7 +8,9 @@
 # top = direction that the top of the word points
 #   Note that not all (dir,top) pairs are valid
 #   For example, if dir=north or south, top can't be north or south
+
 #' @importFrom miner setBlock
+
 render_bitmap <- function(bitmap, bottomleft, id, style=0,
                           dir=c("north", "south", "east", "west", "up", "down"),
                           top=c("up", "down", "east", "west", "north", "south"))

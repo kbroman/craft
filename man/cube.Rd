@@ -5,8 +5,8 @@
 \title{Make a cube}
 \usage{
 cube(xlen = 10, ylen = 10, zlen = 10, blockid = 1, styleid = 0,
-  fill = FALSE, offset = c(0, -1, 0), playerid = getPlayerIds(), pos,
-  xlim, ylim, zlim)
+  fill = FALSE, offset = c(0, -1, 0), playerid = miner::getPlayerIds(),
+  pos, xlim, ylim, zlim)
 }
 \arguments{
 \item{xlen}{integer. Cube length.}
@@ -34,7 +34,7 @@ cube(xlen = 10, ylen = 10, zlen = 10, blockid = 1, styleid = 0,
 \item{zlim}{vector of length two. Defines the lower and upper cuttoff points to truncate the cube.}
 }
 \value{
-Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{getPlayerPos}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
+Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
 }
 \description{
 Make a solid or hollow cube.

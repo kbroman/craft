@@ -15,20 +15,21 @@
 #' @param ylim vector of length two. Defines the lower and upper cuttoff points to truncate the cube.
 #' @param zlim vector of length two. Defines the lower and upper cuttoff points to truncate the cube.
 #'
-#' @return Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{getPlayerPos}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
+#' @return Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
 #' @export
+#' @importFrom miner getPlayerIds getPlayerPos
 #'
 #' @seealso \code{\link{sphere}} to create a sphere.
 #'
 #' @examples
 #' \dontrun{
-#' 
+#'
 #' # Stone cube 10x10x10
 #' cube(pos = c(0, 0, 0))
-#' 
+#'
 #' # Erase cube
 #' cube(blockid = 0, pos = c(0, 0, 0))
-#' 
+#'
 #' # Stone fence
 #' cube(ylim = c(2, 3), offset = c(0, -2, 0))
 #' }
@@ -39,13 +40,13 @@ cube <- function(
   styleid = 0,
   fill = FALSE,
   offset = c(0, -1, 0),
-  playerid = getPlayerIds(),
+  playerid = miner::getPlayerIds(),
   pos, xlim, ylim, zlim
 ){
 
     if(missing(pos)){
         if(length(playerid) != 1) stop("playerid must be of length one")
-        pos <- getPlayerPos(playerid, tile = TRUE)
+        pos <- miner::getPlayerPos(playerid, tile = TRUE)
     }
 
     s <- 1 - fill
