@@ -8,7 +8,7 @@ heading <- list()
 #' A heading of 0 degreees is towards South or positive z
 #' A heading of 270 or -90 degreees is towards East or positive x
 #' A heading of 90 degrees is towards West or negative x
-#' 
+#'
 #' @param player_id An integer with the player id
 #' @param new_heading A numeric with the direction to head forward
 #'
@@ -24,20 +24,21 @@ setHeading <- function(player_id, new_heading) {
 }
 
 #' Set player heading to match the direction the player is facing
-#' 
+#'
 #' @param player_id An integer with the player id
 #'
 #' @examples \dontrun{
 #' initHeading(myid)
 #' }
 #'
+#' @importFrom miner getPlayerRotation
 #' @export
 initHeading <- function(player_id) {
-  setHeading(player_id, getPlayerRotation(player_id))
+  setHeading(player_id, miner::getPlayerRotation(player_id))
 }
 
 #' Get player heading
-#' 
+#'
 #' @param player_id An integer with the player id
 #' @return Player heading in degrees
 #'
@@ -51,7 +52,7 @@ getHeading <- function(player_id) {
 }
 
 #' Move the player in the direction of the player heading
-#' 
+#'
 #' @param player_id An integer with the player id
 #' @param distance The distance to move the player
 #'
@@ -60,6 +61,7 @@ getHeading <- function(player_id) {
 #' moveForward(myid, 0.5)
 #' }
 #'
+#' @importFrom miner setPlayerPos
 #' @export
 moveForward <- function(player_id, distance = 1) {
   pos <- getPlayerPos(player_id)
@@ -67,16 +69,16 @@ moveForward <- function(player_id, distance = 1) {
   player_heading_radians <- player_heading_degrees * pi / 180
   unit_vector <- c(-sin(player_heading_radians), 0, cos(player_heading_radians))
   new_pos <- pos + unit_vector * distance
-  setPlayerPos(new_pos[1], new_pos[2], new_pos[3], player_id)
+  miner::setPlayerPos(new_pos[1], new_pos[2], new_pos[3], player_id)
 }
 
 #' Rotate the player heading to the left
-#' 
+#'
 #' Use a positive angle value to rotate to the left.
 #' Use a negative angle to rotate to the right.
 #' The player does not turn in the game; rather, the heading
 #' for subsequent movement commands is rotated.
-#' 
+#'
 #' @param player_id An integer with the player id
 #' @param angle The number of degrees to rotate left
 #'
@@ -97,11 +99,11 @@ turnLeft <- function(player_id, angle = 90) {
 }
 
 #' Check the block type (if any) ahead of the player
-#' 
+#'
 #' Check the block type (if any) ahead of the player.
 #' Look in the direction of the player heading
 #' at the specified distance.
-#' 
+#'
 #' @param player_id An integer with the player id
 #' @param distance The distance to look
 #'
@@ -109,6 +111,7 @@ turnLeft <- function(player_id, angle = 90) {
 #' lookForward(myid)
 #' }
 #'
+#' @importFrom miner getBlock
 #' @export
 lookForward <- function(player_id, distance = 1) {
   pos <- getPlayerPos(player_id)
@@ -116,5 +119,5 @@ lookForward <- function(player_id, distance = 1) {
   player_heading_radians <- player_heading_degrees * pi / 180
   unit_vector <- c(-sin(player_heading_radians), 0, cos(player_heading_radians))
   new_pos <- pos + unit_vector * distance
-  getBlock(new_pos[1], new_pos[2], new_pos[3])
+  miner::getBlock(new_pos[1], new_pos[2], new_pos[3])
 }

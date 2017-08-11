@@ -1,6 +1,9 @@
 #' Generates a maze in front of a player
 #' @param n size of the maze
 #' @param player_id optional player id
+#' @importFrom miner setBlocks
+#' @importFrom igraph as_data_frame
+#' @importFrom Rmaze makeGraph makeMaze_dfs
 #' @export
 mc_maze <- function(n = 5, player_id = NULL) {
 
@@ -11,9 +14,8 @@ mc_maze <- function(n = 5, player_id = NULL) {
     z <- pos[3]
 
     ## generate a random but perfect maze
-    requireNamespace('Rmaze')
-    maze <- makeGraph(n, n)
-    maze <- makeMaze_dfs(maze)
+    maze <- Rmaze::makeGraph(n, n)
+    maze <- Rmaze::makeMaze_dfs(maze)
     ## plotMaze(maze, n, n)
 
     ## let's start the binary matrix representation with blank cells
@@ -32,7 +34,7 @@ mc_maze <- function(n = 5, player_id = NULL) {
 
     ## map graph edges into matrix cells
     requireNamespace('igraph')
-    mazedf <- as_data_frame(maze)
+    mazedf <- igraph::as_data_frame(maze)
     for (v in c('from', 'to')) {
         mazedf[, paste0(v, 'x')] <- as.numeric(sub('A_([0-9]*)_[0-9]*', '\\1', mazedf[, v]))
         mazedf[, paste0(v, 'y')] <- as.numeric(sub('A_[0-9]*_([0-9]*)', '\\1', mazedf[, v]))
@@ -57,18 +59,18 @@ mc_maze <- function(n = 5, player_id = NULL) {
     }
 
     ## clean up some space (replace with air)
-    setBlocks(x, y, z, x + nr, y + 4, z + nc, 0)
+    miner::setBlocks(x, y, z, x + nr, y + 4, z + nc, 0)
     ## add diamond floor
-    setBlocks(x, y, z, x + nr, y, z + nc, 57)
+    miner::setBlocks(x, y, z, x + nr, y, z + nc, 57)
     ## add torch
-    setBlocks(x + nr - 4, y + 1, z + 2, x + nr, y + 2, z + 4, 50)
+    miner::setBlocks(x + nr - 4, y + 1, z + 2, x + nr, y + 2, z + 4, 50)
     ## add glass ceiling
-    setBlocks(x, y + 4, z, x + nr, y + 4, z + nc, 95)
+    miner::setBlocks(x, y + 4, z, x + nr, y + 4, z + nc, 95)
     ## add gold walls
     for (i in 1:nrow(df)) {
         for (j in 1:ncol(df)) {
             if (!is.na(df[i, j])) {
-                setBlocks(x + i, y + 1, z + j, x + i, y + 3, z + j, 41)
+                miner::setBlocks(x + i, y + 1, z + j, x + i, y + 3, z + j, 41)
             }
         }
     }

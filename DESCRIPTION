@@ -12,8 +12,8 @@ Authors@R: c(
     )
 Description: Extra functions to illustrate the use of the miner package to control Minecraft with the RaspberryJuice API.
 Depends: R (>= 3.1.0)
-Imports: miner
-Suggests: imager, testthat, Rmaze, igraph
+Imports: miner, Rmaze, igraph
+Suggests: imager, testthat
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
