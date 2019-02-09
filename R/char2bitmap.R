@@ -1,7 +1,7 @@
 # get bitmap for a given character
 #' @importFrom utils data
 char2bitmap <- function(char,
-                        font=c("4x5", "4x6", "4x8", "6x6", "8x6",
+                        font=c("4x5", "4x6", "4x8", "6x6", "8x6", "6x8", "8x8",
                                "4x12", "6x12", "8x12", "8x16", "16x16"))
 {
     font <- match.arg(font)

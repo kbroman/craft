@@ -5,8 +5,8 @@
 \title{Clear scatterplot}
 \usage{
 mc_clearplot(lowerleft, x, y, xlab = "x", ylab = "y", width = 120,
-  height = 120, dir = c("east", "west", "north", "south", "up", "down"),
-  top = c("up", "north", "south", "east", "west", "down"))
+  height = 120, dir = c("east", "west", "north", "south", "up",
+  "down"), top = c("up", "north", "south", "east", "west", "down"))
 }
 \arguments{
 \item{lowerleft}{Vector of length 3, specifying the position of the lower-left corner of the plot.}
