@@ -19,7 +19,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ROpenSciLabs/craft
 BugReports: https://github.com/ROpenSciLabs/craft/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Remotes:
     ropenscilabs/miner,
     Vessy/Rmaze

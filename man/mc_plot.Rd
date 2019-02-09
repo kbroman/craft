@@ -4,11 +4,12 @@
 \alias{mc_plot}
 \title{Scatterplot within Minecraft}
 \usage{
-mc_plot(lowerleft = miner::getPlayerPos() + c(0, 5, 5), x, y, xlab = "x",
-  ylab = "y", group = NULL, width = 120, height = 120, dir = c("east",
-  "west", "north", "south", "up", "down"), top = c("up", "north", "south",
-  "east", "west", "down"), block_colors = list(gray = c(35, 8), white = c(35,
-  0), black = c(35, 15), colors = cbind(35, c(9, 14, 5))))
+mc_plot(lowerleft = miner::getPlayerPos() + c(0, 5, 5), x, y,
+  xlab = "x", ylab = "y", group = NULL, width = 120,
+  height = 120, dir = c("east", "west", "north", "south", "up",
+  "down"), top = c("up", "north", "south", "east", "west", "down"),
+  block_colors = list(gray = c(35, 8), white = c(35, 0), black = c(35,
+  15), colors = cbind(35, c(9, 14, 5))))
 }
 \arguments{
 \item{lowerleft}{Vector of length 3, specifying the position of the lower-left corner of the plot.}
