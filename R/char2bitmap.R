@@ -5,6 +5,7 @@ char2bitmap <- function(char,
                                "4x12", "6x12", "8x12", "8x16", "16x16"))
 {
     font <- match.arg(font)
+
     if(length(char) > 1) {
         return(lapply(char, char2bitmap, font))
     }
@@ -13,8 +14,8 @@ char2bitmap <- function(char,
         return(do.call("cbind", result))
     }
 
+    library(craft) # force load package
     utils::data(font_sets, package="craft", envir=parent.frame())
-
     chars <- font_sets[[font]]$charset
     png <- font_sets[[font]]$png
 

@@ -1,4 +1,4 @@
-## Version 0.1.5 (2019-02-08)
+## Version 0.1.6 (2019-02-10)
 
 ### Minor changes
 
@@ -10,3 +10,5 @@
 
 - Fixed a bug with the `8x6` font (had the bitmap mixed up with the
   6x8 font).
+
+- `craft::write_text()` now works when the package isn't loaded.
