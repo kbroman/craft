@@ -6,6 +6,9 @@
   the `font_sets` data set, but weren't included as possibilities in
   the `write_text()` arguments.
 
+- More informative warning message from write_text() if characters are
+  not present in the selected font.
+
 ### Bug fixes
 
 - Fixed a bug with the `8x6` font (had the bitmap mixed up with the

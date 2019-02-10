@@ -28,7 +28,7 @@ char2bitmap <- function(char,
     # row column coordinates
     wh <- which(chars==char, arr.ind=TRUE)
     if(length(wh) == 0) { # use a space instead
-        warning('Character "', char, '" not found')
+        warning('Character "', char, '" is not in the ', font, ' font')
         wh <- which(chars==" ", arr.ind=TRUE)
     }
     if(length(wh) > 2) wh <- wh[1,]
