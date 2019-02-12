@@ -20,7 +20,7 @@
 #' @importFrom miner getPlayerRotation
 #' @export
 
-getPlayerCompass <- function(player_id, n_compass_points=c("16","8","4"))
+getPlayerCompass <- function(player_id=NULL, n_compass_points=c("16","8","4"))
 {
     n_compass_points <- as.character(n_compass_points)
     n_compass_points <- match.arg(n_compass_points)
