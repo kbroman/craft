@@ -1,5 +1,10 @@
 ## Version 0.1.7 (2019-02-11)
 
+### New features
+
+- Added `getPlayerCompass()` for getting a player's rotation as a
+  compass heading (e.g., "east-northeast")
+
 ### Minor changes
 
 - Added a couple of additional fonts for `write_text()`. (They were in
