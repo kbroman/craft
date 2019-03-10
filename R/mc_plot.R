@@ -13,11 +13,11 @@
 #' @param dir Direction the plot will go
 #' @param top Direction for the top of the plot
 #' @param block_colors A list of block IDs and styles to denote the colors to be used; needs to contain
-#' \code{"gray"}, \code{"white"}, \code{"black"}, and \code{"colors"}.
+#' `"gray"`, `"white"`, `"black"`, and `"colors"`.
 #'
-#' @return Returns the input \code{lowerleft}.
+#' @return Returns the input `lowerleft`.
 #'
-#' @seealso \code{\link{mc_clearplot}}
+#' @seealso [mc_clearplot()]
 #'
 #' @examples
 #' \dontrun{
@@ -282,7 +282,7 @@ mc_plot <-
 
 #' Clear scatterplot
 #'
-#' Remove a scatterplot created with \code{\link{mc_plot}} by replacing the blocks with air.
+#' Remove a scatterplot created with [mc_plot()] by replacing the blocks with air.
 #'
 #' @param lowerleft Vector of length 3, specifying the position of the lower-left corner of the plot.
 #' @param x Vector of x values
@@ -296,7 +296,7 @@ mc_plot <-
 #'
 #' @return None.
 #'
-#' @seealso \code{\link{mc_clearplot}}
+#' @seealso [mc_plot()]
 #'
 #' @examples
 #' \dontrun{

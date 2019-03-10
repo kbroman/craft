@@ -10,7 +10,7 @@
 #' @importFrom miner getChatPosts chatPost
 #' @export
 #'
-#' @details Uses \code{\link[base]{grepl}}, ignoring case, to look for
+#' @details Uses [base::grepl()], ignoring case, to look for
 #'     "who am I" in the chat messages, and prints the player ID of
 #'     any player who posts a chat message containing that phrase.
 #'

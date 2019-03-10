@@ -30,7 +30,7 @@ sphere(radius = 15, blockid = 20, styleid = 0, fill = FALSE,
 \item{zlim}{vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.}
 }
 \value{
-Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
+Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{\link[miner:getPlayerPos]{miner::getPlayerPos()}}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
 }
 \description{
 Make a solid or hollow sphere with the player at the center.
@@ -50,5 +50,5 @@ sphere(ylim = c(0, 15))
 
 }
 \seealso{
-\code{\link{cube}} to create a cube.
+\code{\link[=cube]{cube()}} to create a cube.
 }

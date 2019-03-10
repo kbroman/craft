@@ -34,7 +34,7 @@ cube(xlen = 10, ylen = 10, zlen = 10, blockid = 1, styleid = 0,
 \item{zlim}{vector of length two. Defines the lower and upper cuttoff points to truncate the cube.}
 }
 \value{
-Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
+Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{\link[miner:getPlayerPos]{miner::getPlayerPos()}}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
 }
 \description{
 Make a solid or hollow cube.
@@ -54,5 +54,5 @@ cube(ylim = c(2, 3), offset = c(0, -2, 0))
 
 }
 \seealso{
-\code{\link{sphere}} to create a sphere.
+\code{\link[=sphere]{sphere()}} to create a sphere.
 }

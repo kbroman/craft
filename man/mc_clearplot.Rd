@@ -31,7 +31,7 @@ mc_clearplot(lowerleft, x, y, xlab = "x", ylab = "y", width = 120,
 None.
 }
 \description{
-Remove a scatterplot created with \code{\link{mc_plot}} by replacing the blocks with air.
+Remove a scatterplot created with \code{\link[=mc_plot]{mc_plot()}} by replacing the blocks with air.
 }
 \examples{
 \dontrun{
@@ -44,5 +44,5 @@ mc_clearplot(v, x=iris$Sepal.Length, y=iris$Sepal.Width,
 
 }
 \seealso{
-\code{\link{mc_clearplot}}
+\code{\link[=mc_plot]{mc_plot()}}
 }

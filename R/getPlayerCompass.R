@@ -2,8 +2,6 @@
 #'
 #' Get the direction that a player is facing as a compass bearing (north, south, east, west, etc.)
 #'
-#' @md
-#'
 #' @param player_id Numeric ID for the player
 #' @param n_compass_points Number of compass points to use (4, 8, or 16)
 #'

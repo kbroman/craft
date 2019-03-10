@@ -29,5 +29,5 @@ elsafy(215)
 
 }
 \seealso{
-\code{\link{de_elsafy}}
+\code{\link[=de_elsafy]{de_elsafy()}}
 }
