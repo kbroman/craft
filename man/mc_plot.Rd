@@ -51,5 +51,5 @@ v <- mc_plot(getPlayerPos()+c(0, 5, 5),
 
 }
 \seealso{
-\code{\link{mc_clearplot}}
+\code{\link[=mc_clearplot]{mc_clearplot()}}
 }

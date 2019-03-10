@@ -6,18 +6,18 @@
 #' @param blockid integer. Block type to be used.
 #' @param styleid integer. Block style to be used.
 #' @param fill logical. Should the sphere be solid or hollow. Defaults to hollow.
-#' @param offset vector of length three. Defines where to place the sphere with respect to \code{pos}.
+#' @param offset vector of length three. Defines where to place the sphere with respect to `pos`.
 #' @param playerid integer of length one. Defaults to player id in solo play. Set explicitly in multi play.
 #' @param pos vector of length three. Defines the center of the sphere. Defaults to the player id position.
 #' @param xlim vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.
 #' @param ylim vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.
 #' @param zlim vector of length two. Defines the lower and upper cuttoff points to truncate the sphere.
 #'
-#' @return Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use \code{fill=TRUE} to create a solid sphere. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the sphere with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the sphere. This function will return the sphere's origin.
+#' @return Builds a sphere (or a truncated sphere) around the players current position. By default, the sphere is hollow, but you can also use `fill=TRUE` to create a solid sphere. The players position is determined by [miner::getPlayerPos()]. You can you can reposition the sphere with the `offset` command. Use `xlim`, `ylim`, `zlim` to truncate the sphere. This function will return the sphere's origin.
 #' @export
 #' @importFrom miner getPlayerIds getPlayerPos
 #'
-#' @seealso \code{\link{cube}} to create a cube.
+#' @seealso [cube()] to create a cube.
 #'
 #' @examples
 #' \dontrun{

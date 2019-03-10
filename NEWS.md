@@ -1,3 +1,10 @@
+## Version 0.1.8 (2019-03-10)
+
+### Minor changes
+
+- Convert documentation to markdown
+
+
 ## Version 0.1.7 (2019-02-11)
 
 ### New features

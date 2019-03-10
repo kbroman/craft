@@ -8,18 +8,18 @@
 #' @param blockid integer. Block type.
 #' @param styleid integer. Block style.
 #' @param fill logical. If TRUE then solid. If FALSE then hollow.
-#' @param offset vector of length three. How many units to offset the cube from \code{pos}.
+#' @param offset vector of length three. How many units to offset the cube from `pos`.
 #' @param playerid integer of length one. Defaults to player id in solo play. Set explicitly in multi play.
 #' @param pos vector of length three. Defines the corner of the cube. Defaults to the player's position.
 #' @param xlim vector of length two. Defines the lower and upper cuttoff points to truncate the cube.
 #' @param ylim vector of length two. Defines the lower and upper cuttoff points to truncate the cube.
 #' @param zlim vector of length two. Defines the lower and upper cuttoff points to truncate the cube.
 #'
-#' @return Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use \code{fill=TRUE} to create a solid cube. The players position is determined by \code{\link[miner]{getPlayerPos}}. You can you can reposition the cube with the \code{offset} command. Use \code{xlim}, \code{ylim}, \code{zlim} to truncate the cube to create a fence or wall. This function will return the cube origin.
+#' @return Builds a cube or cuboid with the corner at the player's position. By default, the cube is hollow, but you can also use `fill=TRUE` to create a solid cube. The players position is determined by [miner::getPlayerPos()]. You can you can reposition the cube with the `offset` command. Use `xlim`, `ylim`, `zlim` to truncate the cube to create a fence or wall. This function will return the cube origin.
 #' @export
 #' @importFrom miner getPlayerIds getPlayerPos
 #'
-#' @seealso \code{\link{sphere}} to create a sphere.
+#' @seealso [sphere()] to create a sphere.
 #'
 #' @examples
 #' \dontrun{

@@ -19,7 +19,7 @@ de_elsafy(player_id = NULL, water = 8, ice = 174, delay = 0.05)
 None.
 }
 \description{
-Give a player revsese Elsa powers, to clean up after running \code{\link{elsafy}}: when she walks over ice, it turns back to water.
+Give a player revsese Elsa powers, to clean up after running \code{\link[=elsafy]{elsafy()}}: when she walks over ice, it turns back to water.
 }
 \examples{
 \dontrun{
@@ -29,5 +29,5 @@ de_elsafy(215)
 
 }
 \seealso{
-\code{\link{elsafy}}
+\code{\link[=elsafy]{elsafy()}}
 }

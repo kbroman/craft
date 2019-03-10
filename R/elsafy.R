@@ -15,7 +15,7 @@
 #' elsafy(215)
 #' }
 #'
-#' @seealso \code{\link{de_elsafy}}
+#' @seealso [de_elsafy()]
 #' @importFrom miner getPlayerPos getBlocks setBlock
 #' @export
 elsafy <- function(player_id=NULL, water=c(8, 9), ice=174, delay=0.02)
@@ -37,7 +37,7 @@ elsafy <- function(player_id=NULL, water=c(8, 9), ice=174, delay=0.02)
 
 #' Give a player reverse Elsa powers
 #'
-#' Give a player revsese Elsa powers, to clean up after running \code{\link{elsafy}}: when she walks over ice, it turns back to water.
+#' Give a player revsese Elsa powers, to clean up after running [elsafy()]: when she walks over ice, it turns back to water.
 #'
 #' @param player_id Player's entity ID
 #' @param water Item IDs for water
@@ -52,7 +52,7 @@ elsafy <- function(player_id=NULL, water=c(8, 9), ice=174, delay=0.02)
 #' de_elsafy(215)
 #' }
 #'
-#' @seealso \code{\link{elsafy}}
+#' @seealso [elsafy()]
 #' @export
 de_elsafy <- function(player_id=NULL, water=8, ice=174, delay=0.05)
 {
