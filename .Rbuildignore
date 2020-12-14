@@ -1,5 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.travis\.yml$
 ^Makefile$
 ^inst/scripts/.RData$
+^\.github$

@@ -1,6 +1,6 @@
 ## craft
 
-[![Travis-CI Build Status](https://travis-ci.org/kbroman/craft.svg?branch=master)](https://travis-ci.org/kbroman/craft)
+[![R-CMD-check](https://github.com/kbroman/craft/workflows/R-CMD-check/badge.svg)](https://github.com/kbroman/craft/actions)
 
 The [miner R package](https://github.com/kbroman/miner) makes it
 possible to interact with [Minecraft](https://minecraft.net) from
