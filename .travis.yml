@@ -5,5 +5,5 @@ sudo: false
 cache: packages
 
 r_github_packages:
- - ROpenSciLabs/miner
+ - kbroman/miner
  - Vessy/RMaze

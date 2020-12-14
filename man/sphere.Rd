@@ -4,9 +4,18 @@
 \alias{sphere}
 \title{Make a sphere}
 \usage{
-sphere(radius = 15, blockid = 20, styleid = 0, fill = FALSE,
-  offset = c(0, 0, 0), playerid = miner::getPlayerIds(), pos, xlim,
-  ylim, zlim)
+sphere(
+  radius = 15,
+  blockid = 20,
+  styleid = 0,
+  fill = FALSE,
+  offset = c(0, 0, 0),
+  playerid = miner::getPlayerIds(),
+  pos,
+  xlim,
+  ylim,
+  zlim
+)
 }
 \arguments{
 \item{radius}{integer. Specifies the radius of the sphere.}

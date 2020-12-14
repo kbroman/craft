@@ -1,13 +1,13 @@
 ## craft
 
-[![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/craft.svg?branch=master)](https://travis-ci.org/ropenscilabs/craft)
+[![Travis-CI Build Status](https://travis-ci.org/kbroman/craft.svg?branch=master)](https://travis-ci.org/kbroman/craft)
 
-The [miner R package](https://github.com/ROpenSciLabs/miner) makes it
+The [miner R package](https://github.com/kbroman/miner) makes it
 possible to interact with [Minecraft](https://minecraft.net) from
 [R](https://www.r-project.org).
 
 The present package,
-[craft](https://github.com/ROpenSciLabs/craft), includes
+[craft](https://github.com/kbroman/craft), includes
 additional functions that illustrate and extend the use of miner.
 
 

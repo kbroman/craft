@@ -4,9 +4,20 @@
 \alias{cube}
 \title{Make a cube}
 \usage{
-cube(xlen = 10, ylen = 10, zlen = 10, blockid = 1, styleid = 0,
-  fill = FALSE, offset = c(0, -1, 0),
-  playerid = miner::getPlayerIds(), pos, xlim, ylim, zlim)
+cube(
+  xlen = 10,
+  ylen = 10,
+  zlen = 10,
+  blockid = 1,
+  styleid = 0,
+  fill = FALSE,
+  offset = c(0, -1, 0),
+  playerid = miner::getPlayerIds(),
+  pos,
+  xlim,
+  ylim,
+  zlim
+)
 }
 \arguments{
 \item{xlen}{integer. Cube length.}

@@ -1,3 +1,11 @@
+## Version 0.1.9 (2020-12-14)
+
+### Minor changes
+
+- The craft package was moved from ropenscilabs to kbroman,
+  <https://github.com/kbroman/craft>
+
+
 ## Version 0.1.8 (2019-03-10)
 
 ### Minor changes

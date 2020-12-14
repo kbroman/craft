@@ -4,8 +4,7 @@
 \alias{getPlayerCompass}
 \title{Get player's rotation  as compass bearing}
 \usage{
-getPlayerCompass(player_id = NULL, n_compass_points = c("16", "8",
-  "4"))
+getPlayerCompass(player_id = NULL, n_compass_points = c("16", "8", "4"))
 }
 \arguments{
 \item{player_id}{Numeric ID for the player}

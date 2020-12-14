@@ -4,7 +4,9 @@
 \name{font_sets}
 \alias{font_sets}
 \title{Font set data}
-\format{An object of class \code{list} of length 12.}
+\format{
+An object of class \code{list} of length 12.
+}
 \source{
 \url{http://uzebox.org/wiki/index.php?title=Font_Bitmaps}
 }

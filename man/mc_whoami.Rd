@@ -18,7 +18,7 @@ A vector of player IDs
 Listen for "Who am I" on minecraft chat, and respond with the player's entity ID.
 }
 \details{
-Uses \code{\link[base:grepl]{base::grepl()}}, ignoring case, to look for
+Uses \code{\link[base:grep]{base::grepl()}}, ignoring case, to look for
 "who am I" in the chat messages, and prints the player ID of
 any player who posts a chat message containing that phrase.
 }
