@@ -15,7 +15,7 @@
 #'     any player who posts a chat message containing that phrase.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' #' will run for 15 seconds
 #' mc_whoami(max_time=15)}
 mc_whoami <- function(delay=1, max_time = Inf)

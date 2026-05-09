@@ -23,7 +23,7 @@ Uses \code{\link[base:grepl]{base::grepl()}}, ignoring case, to look for
 any player who posts a chat message containing that phrase.
 }
 \examples{
-\donttest{
+\dontrun{
 #' will run for 15 seconds
 mc_whoami(max_time=15)}
 }
