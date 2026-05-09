@@ -19,8 +19,8 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/kbroman/craft
 BugReports: https://github.com/kbroman/craft/issues
-RoxygenNote: 7.1.1
 Roxygen: list(markdown=TRUE)
 Remotes:
     kbroman/miner,
-    Vessy/Rmaze
+    kbroman/Rmaze
+Config/roxygen2/version: 8.0.0
