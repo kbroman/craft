@@ -1,6 +1,7 @@
 ## craft
 
-[![R-CMD-check](https://github.com/kbroman/craft/workflows/R-CMD-check/badge.svg)](https://github.com/kbroman/craft/actions)
+[![R-CMD-check](https://github.com/kbroman/craft/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kbroman/craft/actions/workflows/R-CMD-check.yaml)
+[![zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20070587.svg)](https://doi.org/10.5281/zenodo.20070587)
 
 The [miner R package](https://github.com/kbroman/miner) makes it
 possible to interact with [Minecraft](https://minecraft.net) from
