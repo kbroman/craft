@@ -14,7 +14,7 @@ additional functions that illustrate and extend the use of miner.
 
 ### About this package
 
-This package was created as part of the [ROpenSci unconference](http://unconf17.ropensci.org/)
+This package was created as part of the [ROpenSci unconference](https://unconf17.ropensci.org/)
 in May, 2017 by:
 
 * [Brooke Anderson](https://github.com/geanders)
