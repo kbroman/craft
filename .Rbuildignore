@@ -3,3 +3,4 @@
 ^Makefile$
 ^inst/scripts/.RData$
 ^\.github$
+figure/
