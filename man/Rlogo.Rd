@@ -8,7 +8,7 @@
 An object of class \code{cimg} (inherits from \code{imager_array}, \code{numeric}) of dimension 800 x 700 x 1 x 1.
 }
 \source{
-\url{https://www.r-project.org/Rlogo/Rlogo.png}
+\url{https://www.r-project.org/logo/"}
 }
 \usage{
 data(Rlogo)
