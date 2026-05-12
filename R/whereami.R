@@ -20,7 +20,7 @@
 #' whereami()
 #' }
 
-wherami <-
+whereami <-
     function(player_id = NULL, tile=FALSE)
 {
     miner::getPlayerPos(player_id, tile=TRUE)
