@@ -2,7 +2,7 @@
 #'
 #' Render the R logo in minecraft
 #'
-#' @param lowerleft Lower left position (
+#' @param bottomleft Bottom left position (
 #'
 #' @param height Height of R logo in blocks
 #'
