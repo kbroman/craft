@@ -6,6 +6,9 @@
   9](https://kbroman.org/miner_book/rendering-the-r-logo-in-minecraft.html).
   (The script `inst/scripts/r_logo.R` was used to create the dataset.)
 
+- Add `clearSpace()` to clear the space around a player (filling it
+  with air).
+
 
 ## Verison 0.2.1 (2026-05-12)
 
