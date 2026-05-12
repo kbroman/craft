@@ -4,15 +4,22 @@
 \alias{buildRlogo}
 \title{Render R logo in minecraft}
 \usage{
-buildRlogo(lowerleft, height = 80, width = NULL)
+buildRlogo(
+  bottomleft,
+  height = 80,
+  width = NULL,
+  dir = c("north", "south", "east", "west")
+)
 }
 \arguments{
-\item{lowerleft}{Lower left position (}
-
 \item{height}{Height of R logo in blocks}
 
 \item{width}{Width of R logo in blocks
 (if not provided, determined to preserve aspect ratio}
+
+\item{dir}{Which direction should the logo go?}
+
+\item{lowerleft}{Lower left position (}
 }
 \description{
 Render the R logo in minecraft
