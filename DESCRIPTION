@@ -1,7 +1,7 @@
 Package: craft
 Title: Extra Functions to Control Minecraft with RaspberryJuice API
-Version: 0.1.9
-Date: 2019-12-14
+Version: 0.2.0
+Date: 2025-05-12
 Authors@R: c(
     person("Karl",    "Broman",   role = c("aut", "cre"), email = "broman@wisc.edu"),
     person("Brooke",  "Anderson", role="aut"),

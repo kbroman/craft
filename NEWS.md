@@ -1,3 +1,11 @@
+## Verison 0.2.0 (2026-05-12)
+
+### New features
+
+- Added function `ice_towers()` from [Chapter 6](https://kbroman.org/miner_book/planting-a-garden.html)
+  of the [R Programming with Minecraft](https://kbroman.org/miner_book/) book.
+
+
 ## Version 0.1.9 (2020-12-14)
 
 ### Minor changes
