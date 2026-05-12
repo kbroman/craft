@@ -6,8 +6,11 @@
   9](https://kbroman.org/miner_book/rendering-the-r-logo-in-minecraft.html).
   (The script `inst/scripts/r_logo.R` was used to create the dataset.)
 
-- Add `clearSpace()` to clear the space around a player (filling it
+- Added `clearSpace()` to clear the space around a player (filling it
   with air).
+
+- Added `whereami()` which is just like `miner::getPlayerPos()` but
+  with `tile=TRUE` being the default.
 
 
 ## Verison 0.2.1 (2026-05-12)
