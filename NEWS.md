@@ -1,3 +1,12 @@
+## Version 0.3.0 (2026-05-13)
+
+### New features
+
+- Added dataset `Rlogo` and function `buildRlogo()`, based on [Chapter
+  9](https://kbroman.org/miner_book/rendering-the-r-logo-in-minecraft.html).
+  (The script `inst/scripts/r_logo.R` was used to create the dataset.)
+
+
 ## Verison 0.2.1 (2026-05-12)
 
 ### New features
