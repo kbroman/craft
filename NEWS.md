@@ -18,6 +18,8 @@
 - Added `setBlocksMix()` which is like `setBlocks()` but filling in
   with random selection of block types.
 
+- Added function `getPlayerCompassDir()`
+
 
 ## Verison 0.2.1 (2026-05-12)
 
