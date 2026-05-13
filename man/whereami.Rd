@@ -27,3 +27,6 @@ whereami()
 \seealso{
 \code{\link[miner:getPlayerPos]{miner::getPlayerPos()}}
 }
+\author{
+Felix Ling
+}

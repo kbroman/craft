@@ -52,3 +52,6 @@ setBlocksMix(pos[1]+2, pos[2], pos[3]+2,
 \seealso{
 \code{\link[miner:setBlock]{miner::setBlock()}}, \code{\link[miner:setBlocks]{miner::setBlocks()}}, \code{\link[=setBlocksStyle]{setBlocksStyle()}}
 }
+\author{
+Felix Ling
+}

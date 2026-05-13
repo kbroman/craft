@@ -9,7 +9,9 @@
 #' @export
 #'
 #' @seealso [miner::setBlocks()], [miner::getPlayerPos()]
-
+#'
+#' @author Felix Ling
+#'
 #' @examples
 #' \dontrun{
 #' id <- getPlayerIds()[1]

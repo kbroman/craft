@@ -16,6 +16,8 @@
 #'
 #' @return None.
 #'
+#' @author Felix Ling
+#'
 #' @details This is like [miner::setBlocks()] but placing a random
 #' mixture of blocks.
 #'

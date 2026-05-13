@@ -8,6 +8,8 @@
 #' @param method get player direction either from
 #'     [miner::getPlayerRotation()] or [miner::getPlayerDirection()].
 #'
+#' @author Felix Ling
+#'
 #' @return Character string indication player direction
 #'
 #' @export

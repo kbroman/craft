@@ -14,6 +14,8 @@
 #'
 #' @return None.
 #'
+#' @author Felix Ling
+#'
 #' @details This is just like [miner::setBlocks()] but with an
 #' added `style` argument.
 #'

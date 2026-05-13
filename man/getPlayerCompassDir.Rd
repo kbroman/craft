@@ -19,3 +19,6 @@ Character string indication player direction
 Figure out the largest value of a player's direction and translate
 to a compass direction.
 }
+\author{
+Felix Ling
+}

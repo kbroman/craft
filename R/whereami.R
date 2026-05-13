@@ -9,6 +9,8 @@
 #' @details This is just like [miner::getPlayerPos()] but with `tile=TRUE`
 #' being the default.
 #'
+#' @author Felix Ling
+#'
 #' @seealso [miner::getPlayerPos()]
 #'
 #' @importFrom miner getPlayerPos

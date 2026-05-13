@@ -23,3 +23,6 @@ clearSpace(5, id)
 \seealso{
 \code{\link[miner:setBlocks]{miner::setBlocks()}}, \code{\link[miner:getPlayerPos]{miner::getPlayerPos()}}
 }
+\author{
+Felix Ling
+}

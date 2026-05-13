@@ -8,7 +8,8 @@ Authors@R: c(
     person("Gergely", "Daróczi",  role="aut"),
     person("Ali",     "Zaidi",    role="aut"),
     person("Mario",   "Inchiosa", role="aut"),
-    person("David",   "Smith",    role="aut")
+    person("David",   "Smith",    role="aut"),
+    person("Felix",   "Ling",     role="aut")
     )
 Description: Extra functions to illustrate the use of the miner package to control Minecraft with the RaspberryJuice API.
 Depends: R (>= 3.5.0)
