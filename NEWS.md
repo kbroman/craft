@@ -12,6 +12,9 @@
 - Added `whereami()` which is just like `miner::getPlayerPos()` but
   with `tile=TRUE` being the default.
 
+- Added `setBlocksStyle()` which is like `setBlocks()` but also takes
+  a `style` argument (by repeatedly calling `setBlock()`.
+
 
 ## Verison 0.2.1 (2026-05-12)
 
