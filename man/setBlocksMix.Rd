@@ -21,10 +21,10 @@ setBlocksMix(x0, y0, z0, x1, y1, z1, ids, styles = NULL, prob = NULL)
 
 \item{ids}{Vector of block ids}
 
+\item{styles}{Vector of block styles (same length as \code{ids})}
+
 \item{prob}{Probabilities for each block type (same length as \code{ids})
 If NULL, they are taken as equally probable.}
-
-\item{style}{Vector of block styles (same length as \code{ids})}
 }
 \value{
 None.

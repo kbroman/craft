@@ -10,7 +10,7 @@
 #' @param y1 A numeric string with height of opposite corner
 #' @param z1 A numeric string with east/west position of opposite corner
 #' @param ids Vector of block ids
-#' @param style Vector of block styles (same length as `ids`)
+#' @param styles Vector of block styles (same length as `ids`)
 #' @param prob Probabilities for each block type (same length as `ids`)
 #' If NULL, they are taken as equally probable.
 #'
