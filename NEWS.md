@@ -18,7 +18,10 @@
 - Added `setBlocksMix()` which is like `setBlocks()` but filling in
   with random selection of block types.
 
-- Added function `getPlayerCompassDir()`
+- Added function `getPlayerCompassDir()` for getting a player's
+  direction as north/south/east/west.
+
+- Added function `drawLine()` for drawing a line.
 
 
 ## Verison 0.2.1 (2026-05-12)
