@@ -15,6 +15,9 @@
 - Added `setBlocksStyle()` which is like `setBlocks()` but also takes
   a `style` argument (by repeatedly calling `setBlock()`.
 
+- Added `setBlocksMix()` which is like `setBlocks()` but filling in
+  with random selection of block types.
+
 
 ## Verison 0.2.1 (2026-05-12)
 
