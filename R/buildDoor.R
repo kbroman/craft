@@ -31,7 +31,7 @@ buildDoor <- function (x = NULL, y = NULL, z = NULL, direction = NULL,
 {
    # Find out where the player is looking.
    if (is.null (direction))
-      direction <- getPlayerCompassDir (player_id)
+      direction <- getPlayerCompass(player_id, 4)
 
     AIR <- 0
 

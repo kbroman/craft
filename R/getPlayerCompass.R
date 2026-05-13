@@ -25,6 +25,10 @@ getPlayerCompass <- function(player_id=NULL, n_compass_points=c("16","8","4"))
 
     rot <- miner::getPlayerRotation(player_id)
 
+    while(rot < 0) rot <- rot + 360 # force to value >= 0
+    rot <- rot %% 360 # force to value 0-360
+    rot <- rot - 360 # force to value -360 - 0
+
     rotation_to_compass(rot, n_compass_points)
 }
 
