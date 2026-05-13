@@ -18,6 +18,7 @@
 #'
 #' @importFrom imager resize
 #' @importFrom miner setBlock
+#' @importFrom utils data
 #'
 #' @export
 #'
@@ -43,8 +44,8 @@ buildRlogo <-
 {
     dir <- match.arg(dir)
 
-    # download file
-    data(Rlogo)
+    # grab Rlogo data, included with package
+    utils::data(Rlogo, package="craft", envir=parent.frame())
 
     # resize
     if(is.null(width)) Rlogo <- imager::resize(Rlogo, height, round(ncol(Rlogo)/nrow(Rlogo)*height))
