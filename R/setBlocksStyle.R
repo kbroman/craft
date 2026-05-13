@@ -37,6 +37,8 @@
 setBlocksStyle <- function(x0,y0,z0, x1,y1,z1,
                            id, style=0)
 {
+    if(style==0) return( setBlocks(x0,y0,z0, x1,y1,z1, id) )
+
     x0 <- floor(as.numeric(x0))
     y0 <- floor(as.numeric(y0))
     z0 <- floor(as.numeric(z0))
