@@ -11,8 +11,7 @@
 #'
 #' @return None
 #'
-#' @author Felix Ling, based on python code at
-#' <https://gist.github.com/theJollySin/2ba8fbbb7d008b0d1f15>
+#' @author Felix Ling, based on python code in a gist by `theJollySin` that has since been removed
 #'
 #' @export
 #' @importFrom miner setBlock

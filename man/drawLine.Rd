@@ -24,6 +24,5 @@ where each point is a vector of 3 coordinates, and constructs a line between
 the two points.
 }
 \author{
-Felix Ling, based on python code at
-\url{https://gist.github.com/theJollySin/2ba8fbbb7d008b0d1f15}
+Felix Ling, based on python code in a gist by \code{theJollySin} that has since been removed
 }
