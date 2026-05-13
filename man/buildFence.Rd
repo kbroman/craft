@@ -4,14 +4,22 @@
 \alias{buildFence}
 \title{Build a fence around a square area}
 \usage{
-buildFence(length = 8, fenceBlock = 85, gateBlock = 107, player_id = NULL)
+buildFence(
+  length = 8,
+  fenceBlock = 85,
+  gateBlock = 107,
+  foundationBlock = 1,
+  player_id = NULL
+)
 }
 \arguments{
-\item{length}{Length and width of fence}
+\item{length}{Length and width of fence (must be >= 3)}
 
 \item{fenceBlock}{Block ID for fence}
 
 \item{gateBlock}{Block ID for gate in fence}
+
+\item{foundationBlock}{Block ID for foundation (to get everything to a uniform height)}
 
 \item{player_id}{Player ID; fence centered at player's current position}
 }
@@ -19,6 +27,9 @@ buildFence(length = 8, fenceBlock = 85, gateBlock = 107, player_id = NULL)
 None.
 }
 \description{
-Build a fence around a square area, adding a gate at a random side, and
-filling the ground to make a uniform height
+Build a fence around a square area, adding a gate in a random side, and
+filling the ground underneath to make a uniform height
+}
+\note{
+Having trouble getting the fence to connect all the way around".
 }

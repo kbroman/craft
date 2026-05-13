@@ -1,115 +1,93 @@
 #' Build a fence around a square area
 #'
-#' Build a fence around a square area, adding a gate at a random side, and
-#' filling the ground to make a uniform height
-#
+#' Build a fence around a square area, adding a gate in a random side, and
+#' filling the ground underneath to make a uniform height
 #'
-#' @param length Length and width of fence
+#' @param length Length and width of fence (must be >= 3)
 #' @param fenceBlock Block ID for fence
 #' @param gateBlock Block ID for gate in fence
+#' @param foundationBlock Block ID for foundation (to get everything to a uniform height)
 #' @param player_id Player ID; fence centered at player's current position
 #'
 #' @return None.
 #'
+#' @note Having trouble getting the fence to connect all the way around".
+#'
 #' @export
-#' @importFrom miner getPlayerPos setBlock setBlocks
+#' @importFrom miner getPlayerPos setBlock setBlocks getHeight
 #'
 buildFence <- function (length = 8, fenceBlock = 85, gateBlock=107,
+                        foundationBlock=1,
                         player_id = NULL)
 
 {
-    stopifnot(length >= 1)
+    length <- round(length)
+    stopifnot(length >= 3)
+    odd <- as.logical(length %% 2)
 
-   totalLen <- 4 * length
-   heightArray <- vector (length = totalLen)
+    pos <- miner::getPlayerPos (player_id, tile = TRUE)
+    xpos <- pos[1]
+    zpos <- pos[3]
 
-   pos <- getPlayerPos (player_id, tile = TRUE)
-   xStart <- pos[1] - length / 2
-   yStart <- pos[2]
-   zStart <- pos[3] - length / 2
+    if(odd) {
+        left <- -(length-1)/2
+        right <- (length-1)/2
+    } else {
+        left <- -(length/2-1)
+        right <- length/2
+    }
 
-   i <- 1
-   x <- xStart
+    corners = data.frame(x=c(xpos+right, xpos+left, xpos+left, xpos+right),
+                         z=c(zpos+right, zpos+right, zpos+left, zpos+left))
 
-   # Scope out the heights we'll be building.
-   for (z in zStart:(zStart + length)) {
-      heightArray[i] <- getHeight (x, z) +1
-      setBlock (x, heightArray[i], z, fenceBlock)
+    sides <- heights <- vector("list", 4)
+    sides[[1]] <- data.frame(x=seq(corners$x[1], corners$x[2], by=-1),
+                             z=rep(corners$z[1], length))
+    sides[[2]] <- data.frame(x=rep(corners$x[2], length),
+                             z=seq(corners$z[2], corners$z[3], by=-1))
+    sides[[3]] <- data.frame(x=seq(corners$x[3], corners$x[4], by=1),
+                             z=rep(corners$z[3], length))
+    sides[[4]] <- data.frame(x=rep(corners$x[4], length),
+                             z=seq(corners$z[4], corners$z[1], by=1))
 
-      # Checks if there is a height disparity.
-      if (z != zStart)
-      {
-         if (heightArray[i] < heightArray[i - 1])
-         {
-            setBlocks (x, heightArray[i], z,
-                       x, heightArray[i - 1], z, fenceBlock)
-         } else if (heightArray[i] > heightArray[i - 1]) {
-            setBlocks (x, heightArray[i - 1], z - 1,
-                       x, heightArray[i], z - 1, fenceBlock)
-         }
-      }
 
-      i <- i + 1
-   }
-
-   for (x in (xStart+1):(xStart + length)) {
-      heightArray[i] <- getHeight (x, z) +1
-      setBlock (x, heightArray[i], z, fenceBlock)
-
-      if (x != xStart)
-      {
-         if (heightArray[i] < heightArray[i - 1])
-         {
-            setBlocks (x, heightArray[i], z,
-                       x, heightArray[i - 1], z, fenceBlock)
-         } else if (heightArray[i] > heightArray[i - 1]) {
-            setBlocks (x - 1, heightArray[i - 1], z,
-                       x - 1, heightArray[i], z, fenceBlock)
-         }
-      }
-
-      i <- i + 1
-   }
-
-   for (z in (zStart + length-1):zStart) {
-      heightArray[i] <- getHeight (x, z)+1
-      setBlock (x, heightArray[i], z, fenceBlock)
-
-      if (z != zStart + length)
-      {
-         if (heightArray[i] < heightArray[i - 1])
-         {
-            setBlocks (x, heightArray[i], z,
-                       x, heightArray[i - 1], z, fenceBlock)
-         } else if (heightArray[i] > heightArray[i - 1]) {
-            setBlocks (x, heightArray[i - 1], z + 1,
-                       x, heightArray[i], z + 1, fenceBlock)
-         }
-      }
-
-      i <- i + 1
-   }
-
-    if(length > 1) {
-        for (x in (xStart + length-1):(xStart+1)) {
-            heightArray[i] <- getHeight (x, z)+1
-            setBlock (x, heightArray[i], z, fenceBlock)
-
-            if (x != xStart + length)
-            {
-                if (heightArray[i] < heightArray[i - 1])
-                {
-                    setBlocks (x, heightArray[i], z,
-                               x, heightArray[i - 1], z, fenceBlock)
-                } else if (heightArray[i] > heightArray[i - 1]) {
-                    setBlocks (x + 1, heightArray[i - 1], z,
-                               x + 1, heightArray[i], z, fenceBlock)
-                }
-            }
-            i <- i + 1
+    for(i in 1:4) {
+        heights[[i]] <- rep(NA, length-1)
+        for(p in 1:nrow(sides[[i]])) {
+            heights[[i]][p] <- miner::getHeight(sides[[i]]$x[p], sides[[i]]$z[p])
         }
     }
 
 
-    setBlock(x, heightArray[i-1], z, gateBlock)
+    # fill in holes
+    min_height <- min(unlist(heights))
+    max_height <- max(unlist(heights))
+
+    if(min_height < max_height) {
+
+        for(side in seq_along(sides)) {
+            for(p in seq_along(heights[[side]])) {
+                if(heights[[side]][p] < max_height) {
+                    setBlocks(sides[[side]]$x[p], heights[[side]][p]+1, sides[[side]]$z[p],
+                              sides[[side]]$x[p], max_height,           sides[[side]]$z[p], foundationBlock)
+                }
+            }
+        }
+    }
+
+
+    # add fence
+    for(side in seq_along(sides)) {
+        for(x in min(sides[[side]]$x):max(sides[[side]]$x)) {
+            for(z in min(sides[[side]]$z):max(sides[[side]]$z)) {
+                setBlock(x, max_height+1, z, fenceBlock)
+            }
+        }
+    }
+
+    # add a random gate
+    g <- sample(seq_along(sides), 1)
+    gateStyle <- c(0,1,0,1)[g]
+    setBlock(median(sides[[g]]$x), max_height+1, median(sides[[g]]$z), gateBlock, gateStyle)
+
 }
