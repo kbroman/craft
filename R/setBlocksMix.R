@@ -51,7 +51,8 @@ setBlocksMix <- function(x0,y0,z0, x1,y1,z1,
     id <- floor(as.numeric(id))
 
     if(is.null(styles)) styles <- rep(0, length(ids))
-    if(is.null(prob)) prob <- rep(1, length(ids))/length(ids)
+    if(is.null(prob) || length(prob)==1) prob <- rep(1, length(ids))/length(ids)
+    if(length(styles)==1) styles <- rep(styles, length(ids))
     stopifnot(length(styles) == length(ids))
     stopifnot(length(prob) == length(ids))
 

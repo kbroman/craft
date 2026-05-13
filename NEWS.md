@@ -1,4 +1,4 @@
-## Version 0.3.1 (2026-05-13)
+## Version 0.3.2 (2026-05-13)
 
 ### New features
 
@@ -22,6 +22,11 @@
 
 - Added functions `buildStairs()`, `buildDoor()`, `buildBuilding()`,
   and `buildFence()`.
+
+- Added functions `setBlockV()`, `setBlocksV()`, `setBlocksStyleV()`,
+  `setBlocksMixV()`, `setPlayerPosV()`, and `setPlayerDirectionV()`
+  which are like the versions without `V` in the name, but taking a
+  vector as a position rather than three separate values.
 
 
 ## Verison 0.2.1 (2026-05-12)
