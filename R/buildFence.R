@@ -11,8 +11,6 @@
 #'
 #' @return None.
 #'
-#' @note Having trouble getting the fence to connect all the way around".
-#'
 #' @export
 #' @importFrom miner getPlayerPos setBlock setBlocks getHeight
 #' @importFrom stats median
@@ -85,6 +83,26 @@ buildFence <- function (length = 8, fenceBlock = 85, gateBlock=107,
             }
         }
     }
+
+    # add a bit of fence off each corner and then delete
+    # (this is the only way I could figure out to force the fence to be fully connected)
+    setBlock(corners$x[1]+1, max_height+1, corners$z[1], fenceBlock)
+    setBlock(corners$x[1], max_height+1, corners$z[1]+1, fenceBlock)
+    setBlock(corners$x[2]-1, max_height+1, corners$z[2], fenceBlock)
+    setBlock(corners$x[2], max_height+1, corners$z[2]+1, fenceBlock)
+    setBlock(corners$x[3]-1, max_height+1, corners$z[3], fenceBlock)
+    setBlock(corners$x[3], max_height+1, corners$z[3]-1, fenceBlock)
+    setBlock(corners$x[4]+1, max_height+1, corners$z[4], fenceBlock)
+    setBlock(corners$x[4], max_height+1, corners$z[4]-1, fenceBlock)
+
+    setBlock(corners$x[1]+1, max_height+1, corners$z[1], 0)
+    setBlock(corners$x[1], max_height+1, corners$z[1]+1, 0)
+    setBlock(corners$x[2]-1, max_height+1, corners$z[2], 0)
+    setBlock(corners$x[2], max_height+1, corners$z[2]+1, 0)
+    setBlock(corners$x[3]-1, max_height+1, corners$z[3], 0)
+    setBlock(corners$x[3], max_height+1, corners$z[3]-1, 0)
+    setBlock(corners$x[4]+1, max_height+1, corners$z[4], 0)
+    setBlock(corners$x[4], max_height+1, corners$z[4]-1, 0)
 
     # add a random gate
     g <- sample(seq_along(sides), 1)

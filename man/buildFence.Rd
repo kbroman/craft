@@ -30,6 +30,3 @@ None.
 Build a fence around a square area, adding a gate in a random side, and
 filling the ground underneath to make a uniform height
 }
-\note{
-Having trouble getting the fence to connect all the way around".
-}
