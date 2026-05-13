@@ -129,7 +129,7 @@ setBlocksStyleV <- function(pos0, pos1, id, style)
 #'
 #' @export
 
-setBlocksMixV <- function(pos0, pos1, id, style=NULL, prob=NULL)
+setBlocksMixV <- function(pos0, pos1, ids, styles=NULL, prob=NULL)
 {
     stopifnot(length(pos0)==3)
     stopifnot(all(!is.na(pos0)))
@@ -137,7 +137,7 @@ setBlocksMixV <- function(pos0, pos1, id, style=NULL, prob=NULL)
     stopifnot(all(!is.na(pos1)))
 
     setBlocksMix(pos0[1], pos0[2], pos0[3],
-                 pos1[1], pos1[2], pos1[3], id, style, prob)
+                 pos1[1], pos1[2], pos1[3], ids, styles, prob)
 }
 
 # setPlayerPosV
@@ -194,7 +194,7 @@ setPlayerPosV <-
 #' }
 
 setPlayerDirectionV <-
-    function(pos, id)
+    function(pos, player_id=NULL)
 {
     miner::setPlayerDirection(pos[1], pos[2], pos[3], player_id)
 }

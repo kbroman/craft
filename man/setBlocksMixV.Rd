@@ -4,18 +4,18 @@
 \alias{setBlocksMixV}
 \title{setBlocksMix but taking vector positions}
 \usage{
-setBlocksMixV(pos0, pos1, id, style = NULL, prob = NULL)
+setBlocksMixV(pos0, pos1, ids, styles = NULL, prob = NULL)
 }
 \arguments{
 \item{pos0}{Vector (x,y,z) of first position}
 
 \item{pos1}{Vector (x,y,z) of second position}
 
-\item{prob}{Probabilities for each block type}
-
 \item{ids}{Vector of block IDs}
 
 \item{styles}{Vector of block styles}
+
+\item{prob}{Probabilities for each block type}
 }
 \value{
 None.

@@ -4,7 +4,7 @@
 \alias{setPlayerDirectionV}
 \title{setPlayerDirection but taking a vector of positions}
 \usage{
-setPlayerDirectionV(pos, id)
+setPlayerDirectionV(pos, player_id = NULL)
 }
 \arguments{
 \item{pos}{Vector (x,y,z) giving position}
