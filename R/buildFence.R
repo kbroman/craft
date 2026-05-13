@@ -15,6 +15,7 @@
 #'
 #' @export
 #' @importFrom miner getPlayerPos setBlock setBlocks getHeight
+#' @importFrom stats median
 #'
 buildFence <- function (length = 8, fenceBlock = 85, gateBlock=107,
                         foundationBlock=1,
