@@ -8,7 +8,11 @@ buildRlogo(
   bottomleft,
   height = 80,
   width = NULL,
-  dir = c("north", "south", "east", "west")
+  dir = c("north", "south", "east", "west"),
+  blue_id = 35,
+  blue_style = 11,
+  gray_id = 35,
+  gray_style = 8
 )
 }
 \arguments{
@@ -20,6 +24,14 @@ buildRlogo(
 (if not provided, determined to preserve aspect ratio}
 
 \item{dir}{Which direction should the logo go?}
+
+\item{blue_id}{Block ID for blue blocks}
+
+\item{blue_style}{Block style for blue blocks}
+
+\item{gray_id}{Block ID for gray blocks}
+
+\item{gray_style}{Block style for gray blocks}
 }
 \description{
 Render the R logo in minecraft
@@ -30,5 +42,12 @@ library(miner)
 mc_connect()
 pos <- getPlayerPos(getPlayerIds()[1])
 buildRlogo(pos + c(5, 10, 5))
+
+# used stained glass
+blue_glass <- find_item("Blue Stained Glass")
+gray_glass <- find_item("Gray Stained Glass")
+buildRlogo(pos + c(5, 10, 5),
+           blue_id=blue_glass[2], blue_style=blue_glass[3],
+           gray_id=gray_glass[2], gray_style=gray_glass[3])
 }
 }

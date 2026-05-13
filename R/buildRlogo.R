@@ -11,6 +11,11 @@
 #'
 #' @param dir Which direction should the logo go?
 #'
+#' @param blue_id Block ID for blue blocks
+#' @param blue_style Block style for blue blocks
+#' @param gray_id Block ID for gray blocks
+#' @param gray_style Block style for gray blocks
+#'
 #' @importFrom imager resize
 #' @importFrom miner setBlock
 #'
@@ -22,11 +27,19 @@
 #' mc_connect()
 #' pos <- getPlayerPos(getPlayerIds()[1])
 #' buildRlogo(pos + c(5, 10, 5))
+#'
+#' # used stained glass
+#' blue_glass <- find_item("Blue Stained Glass")
+#' gray_glass <- find_item("Gray Stained Glass")
+#' buildRlogo(pos + c(5, 10, 5),
+#'            blue_id=blue_glass[2], blue_style=blue_glass[3],
+#'            gray_id=gray_glass[2], gray_style=gray_glass[3])
 #' }
 
 buildRlogo <-
     function(bottomleft, height=80, width=NULL,
-             dir=c("north", "south", "east", "west"))
+             dir=c("north", "south", "east", "west"),
+             blue_id=35, blue_style=11, gray_id=35, gray_style=8)
 {
     dir <- match.arg(dir)
 
@@ -38,9 +51,6 @@ buildRlogo <-
     else Rlogo <- imager::resize(Rlogo, height, width)
 
     Rlogo <- Rlogo[,,1,1]
-
-    blue <- data.frame(name="Blue Wool", id=35, style=11) # miner::find_item("Blue Wool")
-    gray <- data.frame(name="Light Gray Wool", id=35, style=8) # miner::find_item("Light Gray Wool")
 
     # east =  positive x   west =  negative x
     # south = positive z   north = negative z
@@ -66,10 +76,10 @@ buildRlogo <-
 
             if(Rlogo[i,j]==2)
                 miner::setBlock(x, y, z,
-                                blue[2], blue[3])
+                                blue_id, blue_style)
             if(Rlogo[i,j] == 3)
                 miner::setBlock(x, y, z,
-                                gray[2], gray[3])
+                                gray_id, gray_style)
         }
     }
 }
