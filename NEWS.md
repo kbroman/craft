@@ -1,3 +1,29 @@
+## Version 0.3.1 (2026-05-13)
+
+### New features
+
+- Added dataset `Rlogo` and function `buildRlogo()`, based on [Chapter
+  9](https://kbroman.org/miner_book/rendering-the-r-logo-in-minecraft.html).
+  (The script `inst/scripts/r_logo.R` was used to create the dataset.)
+
+- Added `clearSpace()` to clear the space around a player (filling it
+  with air).
+
+- Added `whereami()` which is just like `miner::getPlayerPos()` but
+  with `tile=TRUE` being the default.
+
+- Added `setBlocksStyle()` which is like `setBlocks()` but also takes
+  a `style` argument (by repeatedly calling `setBlock()`.
+
+- Added `setBlocksMix()` which is like `setBlocks()` but filling in
+  with random selection of block types.
+
+- Added function `drawLine()` for drawing a line.
+
+- Added functions `buildStairs()`, `buildDoor()`, `buildBuilding()`,
+  and `buildFence()`.
+
+
 ## Verison 0.2.1 (2026-05-12)
 
 ### New features
