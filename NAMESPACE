@@ -3,6 +3,7 @@
 export(buildBuilding)
 export(buildDoor)
 export(buildRlogo)
+export(buildStairs)
 export(clearSpace)
 export(cube)
 export(de_elsafy)

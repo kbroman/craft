@@ -20,7 +20,7 @@
 
 - Added function `drawLine()` for drawing a line.
 
-- Added functions `buildDoor()` and `buildBuilding()`.
+- Added functions `buildStairs()`, `buildDoor()`, `buildBuilding()`.
 
 
 ## Verison 0.2.1 (2026-05-12)
