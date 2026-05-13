@@ -35,7 +35,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install XQuartz on macos
-        if: runner.os == 'maxOS'
+        if: runner.os == 'macos-latest'
         run: brew install xquartz --cask
 
       - uses: r-lib/actions/setup-r@v2
