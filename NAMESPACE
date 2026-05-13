@@ -2,6 +2,7 @@
 
 export(buildBuilding)
 export(buildDoor)
+export(buildFence)
 export(buildRlogo)
 export(buildStairs)
 export(clearSpace)
