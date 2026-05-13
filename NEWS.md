@@ -1,4 +1,4 @@
-## Version 0.3.0 (2026-05-12)
+## Version 0.3.1 (2026-05-13)
 
 ### New features
 
@@ -22,6 +22,8 @@
   direction as north/south/east/west.
 
 - Added function `drawLine()` for drawing a line.
+
+- Added functions `buildDoor()` and `buildBuilding()`.
 
 
 ## Verison 0.2.1 (2026-05-12)
