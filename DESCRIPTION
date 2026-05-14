@@ -14,12 +14,13 @@ Authors@R: c(
 Description: Extra functions to illustrate the use of the miner package to control Minecraft with the RaspberryJuice API.
 Depends: R (>= 3.5.0)
 Imports: miner, Rmaze, igraph, imager, stats
-Suggests: testthat
+Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/kbroman/craft
 BugReports: https://github.com/kbroman/craft/issues
+VignetteBuilder: knitr
 Roxygen: list(markdown=TRUE)
 Remotes:
     kbroman/miner,

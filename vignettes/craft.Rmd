@@ -1,0 +1,166 @@
+---
+title: "Extra functions to control Minecraft"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Extra functions to control Minecraft}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+## Introduction
+
+The [miner](https://github.com/kbroman/miner) package provides a
+simple interface to the Minecraft world. Use R functions
+to connect with a Minecraft server and control the world within.
+
+The [craft](https://github.com/kbroman/craft) includes additional
+functions that illustrate and extend the use of
+[miner](https://github.com/kbroman/craft), including many of the
+examples in our ebook [R Programming with
+Minecraft](https://kbroman.org/miner_book).
+
+### Installation
+
+To install the [miner](https://github.com/kbroman/miner) and
+[craft](https://github.com/kbroman/craft) packages, first install
+[remotes](https://remotes.r-lib.org). Then use
+`remotes::install_github()`.
+
+```r
+install.packages("remotes")
+library(remotes)
+install_github('kbroman/miner')
+install_github('kbroman/craft')
+```
+
+This should automatically install a number of dependent packages,
+including [Rmaze](https://github.com/Vessy/Rmaze),
+[igraph](https://r.igraph.org), and
+[imager](https://asgr.github.io/imager/). To install imager you may
+need to install [Xquartz](https://www.xquartz.org/) on Mac or
+`libx11-dev` or similar on Linux.
+
+To use the packages you will need to:
+
+* Install a Minecraft server
+* Install a Minecraft client (the Minecraft game)
+* Connect to the Minecraft server from R
+
+```r
+library(miner)
+mc_connect('52.1.2.3') ## use your minecraft server IP address here
+```
+
+Note that if your Minecraft server is running locally (on the same
+computer as you're running R), you might not have to specify the IP,
+or you might try `'127.0.0.1'` or `'localhost'`.
+One of these might work:
+
+```r
+mc_connect()
+mc_connect('127.0.0.1')
+mc_connect('localhost')
+```
+
+Full installation instructions are provided in the online book, [R
+programming with Minecraft](https://kbroman.org/miner_book/).
+
+
+## Overview of craft commands
+
+The [miner](https://github.com/kbroman/miner) package includes a bunch
+of basic commands for interacting with your Minecraft world.
+The [craft](https://github.com/kbroman/craft) package combines these
+commands to do bigger things, and also provides alternative versions,
+for programming convenience.
+
+### Useful tools
+
+- `clearSpace`
+- `mc_whoami`
+- `whereami`
+
+
+### Building stuff
+
+- `buildBuilding`
+- `buildDoor`
+- `buildFence`
+- `buildRlogo`
+- `buildStairs`
+- `mc_maze` (and `mc_mazer`)
+
+
+### Drawing stuff
+
+- `cube`
+- `sphere`
+- `drawLine`
+- `mc_plot`
+- `mc_clearplot`
+- `write_text`
+
+
+### Games
+
+- `num_guess`
+
+
+### Alternate orientation functions
+
+- `getPlayerCompass`
+
+
+### Alternate construction functions
+
+- `setBlocksStyle`
+- `setBlocksMix`
+
+
+### Vector-based functions
+
+- `setBlockV`
+- `setBlocksV`
+- `setBlocksStyleV`
+- `setBlocksMixV`
+- `setPlayerPosV`
+- `setPlayerDirectionV`
+
+
+### Being Elsa from Frozen
+
+- `elsafy`
+- `de_elsafy`
+- `ice_towers`
+
+
+### Random walk
+
+- `initHeading`
+- `getHeading`
+- `lookForward`
+- `moveForward`
+- `setHeading`
+- `turnLeft`
+
+
+### Dangerous functions
+
+- `mc_Reval`
+
+
+## Acknowledgments and references
+
+Many of the ideas and techniques in the
+[miner](https://github.com/kbroman/miner) and
+[craft](https://github.com/kbroman/craft) packages were adapted from
+or inspired by
+["Learn to program with Minecraft" by Craig Richardson (No Starch
+Press, 2016)](https://nostarch.com/programwithminecraft),
+["Adventures in Minecraft" by Martin O'Hanlon and David Whale (Wiley,
+2014)](https://www.wiley.com/en-us/Adventures+in+Minecraft%2C+2nd+Edition-p-9781119439554),
+and some work by Alexander Pruss.
