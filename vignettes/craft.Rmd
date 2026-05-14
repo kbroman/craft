@@ -30,7 +30,7 @@ The [craft](https://github.com/kbroman/craft) includes additional
 functions that illustrate and extend the use of
 [miner](https://github.com/kbroman/craft), including many of the
 examples in our ebook [R Programming with
-Minecraft](https://kbroman.org/miner_book).
+Minecraft](https://kbroman.org/miner_book/).
 
 ## Installation
 
@@ -127,6 +127,9 @@ We've added a number of useful tools:
 ### Games
 
 - [`num_guess`](https://kbroman.r-universe.dev/craft/doc/manual.html#num_guess) - Play the number guessing game in [Chapter 7 of our ebook](https://kbroman.org/miner_book/number-guess-chat-bot-in-minecraft.html)
+- [`mc_race`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_race) -
+  Which player will move the farthest in a 10 second race? Based on code
+  from [Chapter 11 of our ebook](https://kbroman.org/miner_book/random-walks-in-the-minecraft-world.html)
 
 
 ### Alternate `setBlocks` functions

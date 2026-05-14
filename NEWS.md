@@ -4,6 +4,10 @@
 
 - Added a vignette, available online at <https://kbroman.org/craft/craft.html>
 
+- Added function `mc_race()`. Identify who moved farthest in a 10
+  second race, based on code in Chapter 11 of
+  [ebook](https://kbroman.org/miner_book/)
+
 ### Minor revisions
 
 - In `mc_maze()`, moved the maze a bit, so that the entrance is right
