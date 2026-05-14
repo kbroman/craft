@@ -23,7 +23,7 @@ functions that illustrate and extend the use of
 examples in our ebook [R Programming with
 Minecraft](https://kbroman.org/miner_book).
 
-### Installation
+## Installation
 
 To install the [miner](https://github.com/kbroman/miner) and
 [craft](https://github.com/kbroman/craft) packages, first install
