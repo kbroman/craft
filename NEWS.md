@@ -1,3 +1,12 @@
+## Version 0.3.3 (2026-05-14)
+
+### Minor revisions
+
+- In `mc_maze()`, moved the maze a bit, so that the entrance is right
+  by the player. Also rotate the player toward the door and add a
+  couple of stairs.
+
+
 ## Version 0.3.2 (2026-05-13)
 
 ### New features

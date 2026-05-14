@@ -1,7 +1,7 @@
 #' Generates a maze in front of a player
 #' @param n size of the maze
 #' @param player_id optional player id
-#' @importFrom miner setBlocks
+#' @importFrom miner setBlocks setPlayerRotation setPlayerPitch setBlock
 #' @importFrom igraph as_data_frame
 #' @importFrom Rmaze makeGraph makeMaze_dfs
 #' @export
@@ -9,6 +9,10 @@ mc_maze <- function(n = 5, player_id = NULL) {
 
     ## get player position
     pos <- getPlayerPos(player_id, tile = TRUE)
+
+    # adjust position so player ends up by entrance
+    pos <- pos - c(-3, 0, n*4-1.5)
+
     x <- pos[1]
     y <- pos[2]
     z <- pos[3]
@@ -75,6 +79,17 @@ mc_maze <- function(n = 5, player_id = NULL) {
         }
     }
 
+    # add stairs (nether brick!)
+    setBlock(x-1, y, z+nr-1, 114)
+    setBlock(x-1, y, z+nr-2, 114)
+
+    # also add a little slab by the entrance
+    setBlocks(x-2, y-1, z+nr,
+              x-4, y-1, z+nr-3, 112)
+
+    ## rotate player towards door
+    setPlayerRotation(270, player_id)
+    setPlayerPitch(0)
 }
 
 
