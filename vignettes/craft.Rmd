@@ -75,82 +75,109 @@ programming with Minecraft](https://kbroman.org/miner_book/).
 The [miner](https://github.com/kbroman/miner) package includes a bunch
 of basic commands for interacting with your Minecraft world.
 The [craft](https://github.com/kbroman/craft) package combines these
-commands to do bigger things, and also provides alternative versions,
-for programming convenience.
-
-### Useful tools
-
-- `clearSpace`
-- `mc_whoami`
-- `whereami`
-
+commands to do bigger things, and also provides alternative versions
+of the basic functions, for programming convenience.
 
 ### Building stuff
 
-- `buildBuilding`
-- `buildDoor`
-- `buildFence`
-- `buildRlogo`
-- `buildStairs`
-- `mc_maze` (and `mc_mazer`)
+There are a number of functions for building stuff:
+
+- [`buildBuilding`](https://kbroman.r-universe.dev/craft/doc/manual.html#buildBuilding) - build a large square building around the player
+- [`buildDoor`](https://kbroman.r-universe.dev/craft/doc/manual.html#buildDoor) - build a door in the direction the player is facing
+- [`buildFence`](https://kbroman.r-universe.dev/craft/doc/manual.html#buildFence) - build a square fence around the player
+- [`buildRlogo`](https://kbroman.r-universe.dev/craft/doc/manual.html#buildRlogo) - render the R logo out of blocks, as in [Chapter 9 of
+  our ebook](https://kbroman.org/miner_book/rendering-the-r-logo-in-minecraft.html)
+- [`buildStairs`](https://kbroman.r-universe.dev/craft/doc/manual.html#buildStairs) - build a set of stairs (going down or up) in the direction the player is facing
+- [`mc_maze`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_maze) -
+  build a maze, as in [Chapter 10 of our
+  ebook](https://kbroman.org/miner_book/generate-a-maze-in-minecraft.html)
+- [`mc_mazer`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_mazer) -
+  run a chat bot to build a maze from the Minecraft chat
+
+### Useful tools
+
+We've added a number of useful tools:
+
+- [`clearSpace`](https://kbroman.r-universe.dev/craft/doc/manual.html#clearSpace) - clear (ie **destroy**) a bunch of space around the player
+- [`mc_whoami`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_whoami) - figure out your player id by typing "who am i" in the chat
+- [`whereami`](https://kbroman.r-universe.dev/craft/doc/manual.html#whereami) - figure out your position
+- [`getPlayerCompass`](https://kbroman.r-universe.dev/craft/doc/manual.html#getPlayerCompass) - get your orientation as a compass direction
+  with 4, 8, or 16 points (for example north, north-west, or north-northwest)
 
 
 ### Drawing stuff
 
-- `cube`
-- `sphere`
-- `drawLine`
-- `mc_plot`
-- `mc_clearplot`
-- `write_text`
+- [`cube`](https://kbroman.r-universe.dev/craft/doc/manual.html#cube) - Make a solid or hollow cube
+- [`sphere`](https://kbroman.r-universe.dev/craft/doc/manual.html#sphere) - Make a solid or hollow sphere with the player at the center
+- [`drawLine`](https://kbroman.r-universe.dev/craft/doc/manual.html#drawLine) - Draw a line
+- [`mc_plot`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_plot) - Render a scatterplot within Minecraft
+- [`mc_clearplot`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_clearplot) - Clear the space where you put that scatterplot
+- [`write_text`](https://kbroman.r-universe.dev/craft/doc/manual.html#write_text) - Write text in Minecraft
 
 
 ### Games
 
-- `num_guess`
+- [`num_guess`](https://kbroman.r-universe.dev/craft/doc/manual.html#num_guess) - Play the number guessing game in [Chapter 7 of our ebook](https://kbroman.org/miner_book/number-guess-chat-bot-in-minecraft.html)
 
 
-### Alternate orientation functions
+### Alternate `setBlocks` functions
 
-- `getPlayerCompass`
+There are a couple of alternative versions of
+[`miner::setBlocks`](https://kbroman.r-universe.dev/miner/doc/manual.html#setBlocks) taking a block style argument, or a
+random mixture of blocks
 
-
-### Alternate construction functions
-
-- `setBlocksStyle`
-- `setBlocksMix`
+- [`setBlocksStyle`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksStyle) - like `setBlocks` but accepting a block style argument
+- [`setBlocksMix`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksMix) - like `setBlocks` but filling a cuboid with randomly
+  selected block types
 
 
 ### Vector-based functions
 
-- `setBlockV`
-- `setBlocksV`
-- `setBlocksStyleV`
-- `setBlocksMixV`
-- `setPlayerPosV`
-- `setPlayerDirectionV`
+The following are like the corresponding function without the `V`, but
+accepting position (or positions) as a vector (or vectors) rather than
+three separate coordinates.  For example, you could write
+`setBlockV(pos, 46)` rather than `setBlock(pos[1], pos[2], pos[3], 46)`.
+
+- [`setBlockV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlockV)
+- [`setBlocksV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksV)
+- [`setBlocksStyleV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksStyleV)
+- [`setBlocksMixV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksMixV)
+- [`setPlayerPosV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setPlayerPosV)
+- [`setPlayerDirectionV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setPlayerDirectionV)
 
 
 ### Being Elsa from Frozen
 
-- `elsafy`
-- `de_elsafy`
-- `ice_towers`
+Give your player Elsa powers in Minecraft:
+
+- [`elsafy`](https://kbroman.r-universe.dev/craft/doc/manual.html#elsafy) -
+  Water turns to ice when your player steps on it
+- [`de_elsafy`](https://kbroman.r-universe.dev/craft/doc/manual.html#de_elsafy) -
+  Turn off the [`elsafy`](https://kbroman.r-universe.dev/craft/doc/manual.html#elsafy)) power
+- [`ice_towers`](https://kbroman.r-universe.dev/craft/doc/manual.html#ice_towers) -
+  Wherever you hit (by right-clicking while holding an iron sword), a
+  tower of ice is built
 
 
 ### Random walk
 
-- `initHeading`
-- `getHeading`
-- `lookForward`
-- `moveForward`
-- `setHeading`
-- `turnLeft`
+The following are for making your player walk randomly around the
+Minecraft world, as in [Chapter 11 of our ebook](https://kbroman.org/miner_book/random-walks-in-the-minecraft-world.html):
+
+- [`initHeading`](https://kbroman.r-universe.dev/craft/doc/manual.html#initHeading)
+- [`getHeading`](https://kbroman.r-universe.dev/craft/doc/manual.html#getHeading)
+- [`lookForward`](https://kbroman.r-universe.dev/craft/doc/manual.html#lookForward)
+- [`moveForward`](https://kbroman.r-universe.dev/craft/doc/manual.html#moveForward)
+- [`setHeading`](https://kbroman.r-universe.dev/craft/doc/manual.html#setHeading)
+- [`turnLeft`](https://kbroman.r-universe.dev/craft/doc/manual.html#turnLeft)
 
 
 ### Dangerous functions
 
-- `mc_Reval`
+Finally, you can run R code directly from Minecraft by typing it in
+the chat. But enable this feature with great care.
+
+- [`mc_Reval`](https://kbroman.r-universe.dev/craft/doc/manual.html#mc_Reval)
 
 
 ## Acknowledgments and references

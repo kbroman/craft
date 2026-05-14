@@ -1,5 +1,9 @@
 ## Version 0.3.3 (2026-05-14)
 
+### New features
+
+- Added a vignette, available online at <https://kbroman.org/craft/craft.html>
+
 ### Minor revisions
 
 - In `mc_maze()`, moved the maze a bit, so that the entrance is right
