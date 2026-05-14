@@ -11,6 +11,14 @@ vignette: >
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
+<style type="text/css">
+body {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 ## Introduction <a href="https://github.com/kbroman/craft"><img src="https://kbroman.org/craft/craft_logo.png" align="right" height="138" alt="craft logo"/></a>
 
 The [miner](https://github.com/kbroman/miner) package provides a
