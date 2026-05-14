@@ -7,10 +7,12 @@ The [miner R package](https://github.com/kbroman/miner) makes it
 possible to interact with [Minecraft](https://minecraft.net) from
 [R](https://www.r-project.org).
 
-The present package,
-[craft](https://github.com/kbroman/craft), includes
-additional functions that illustrate and extend the use of miner.
-
+The [craft](https://github.com/kbroman/craft) includes additional
+functions that illustrate and extend the use of
+[miner](https://github.com/kbroman/craft), including many of the
+examples in our ebook [R Programming with
+Minecraft](https://kbroman.org/miner_book).
+See the [craft vignette](https://kbroman.org/craft/craft.html).
 
 ### About this package
 
