@@ -1,6 +1,7 @@
 ## craft <a href="https://github.com/kbroman/craft"><img src="figure/craft_logo.png" align="right" height="138" alt="craft logo"/></a>
 
 [![R-CMD-check](https://github.com/kbroman/craft/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kbroman/craft/actions/workflows/R-CMD-check.yaml)
+[![r-universe badge](https://kbroman.r-universe.dev/craft/badges/version)](https://kbroman.r-universe.dev/craft)
 [![zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20070587.svg)](https://doi.org/10.5281/zenodo.20070587)
 
 The [miner R package](https://github.com/kbroman/miner) makes it
