@@ -3,6 +3,9 @@ all: doc data/font_sets.RData docs/craft.html
 doc:
 	R -e 'devtools::document()'
 
+test:
+	R -e 'devtools::test()'
+
 data/font_sets.RData: inst/scripts/grab_fonts.R
 	cd $(<D);R -e "source('$(<F)')"
 
