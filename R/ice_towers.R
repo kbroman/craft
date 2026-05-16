@@ -4,6 +4,7 @@
 #'
 #' @param player_id Player's entity ID
 #' @param block_id Item ID (id=212 for frosted ice)
+#' @param block_style Item style
 #' @param max_height Maximum height of ice tower
 #' @param delay Delay (in seconds) between calls to the minecraft server
 #'
@@ -28,7 +29,7 @@
 
 
 ice_towers <-
-    function(player_id, block_id=212, max_height=4, delay = 0.2)
+    function(player_id, block_id=212, block_style=0, max_height=4, delay = 0.2)
 {
     stopifnot(max_height >= 1)
 
@@ -48,9 +49,9 @@ ice_towers <-
 
         for(i in 1:nrow(latest_events)){
             tower_height <- sample(1:max_height, size = 1)
-            miner::setBlocks(latest_events$x[i], latest_events$y[i], latest_events$z[i],
-                             latest_events$x[i], latest_events$y[i] + tower_height, latest_events$z[i],
-                             id=block_id)
+            setBlocksStyle(latest_events$x[i], latest_events$y[i], latest_events$z[i],
+                           latest_events$x[i], latest_events$y[i] + tower_height, latest_events$z[i],
+                           id=block_id, style=block_style)
         }
         Sys.sleep(delay)}
 

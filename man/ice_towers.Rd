@@ -4,12 +4,20 @@
 \alias{ice_towers}
 \title{Make a random ice tower at hit locations}
 \usage{
-ice_towers(player_id, block_id = 212, max_height = 4, delay = 0.2)
+ice_towers(
+  player_id,
+  block_id = 212,
+  block_style = 0,
+  max_height = 4,
+  delay = 0.2
+)
 }
 \arguments{
 \item{player_id}{Player's entity ID}
 
 \item{block_id}{Item ID (id=212 for frosted ice)}
+
+\item{block_style}{Item style}
 
 \item{max_height}{Maximum height of ice tower}
 
