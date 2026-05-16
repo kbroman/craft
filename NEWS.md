@@ -1,3 +1,13 @@
+## Version 0.3.5 (2026-05-16)
+
+### New features
+
+- Added function `find_items()` for finding mulitiple items (with
+  exact matches) from `miner::mc_items`.
+
+- Added `block_style` argument to `ice_towers()`.
+
+
 ## Version 0.3.4 (2026-05-16)
 
 ### New features
