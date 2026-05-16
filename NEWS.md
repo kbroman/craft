@@ -1,3 +1,11 @@
+## Version 0.3.4 (2026-05-16)
+
+### New features
+
+- Added `getBlockV()` and `getBlocksV()` which are like `getBlock()` and
+  `getBlocks()` but takes vector positions.
+
+
 ## Version 0.3.3 (2026-05-14)
 
 ### New features

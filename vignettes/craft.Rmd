@@ -156,6 +156,8 @@ three separate coordinates.  For example, you could write
 - [`setBlocksMixV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setBlocksMixV)
 - [`setPlayerPosV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setPlayerPosV)
 - [`setPlayerDirectionV`](https://kbroman.r-universe.dev/craft/doc/manual.html#setPlayerDirectionV)
+- [`getBlockV`](https://kbroman.r-universe.dev/craft/doc/manual.html#getBlockV)
+- [`getBlocksV`](https://kbroman.r-universe.dev/craft/doc/manual.html#getBlocksV)
 
 
 ### Being Elsa from Frozen

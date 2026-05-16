@@ -35,6 +35,41 @@ setBlockV <- function(pos, id, style=0)
 }
 
 
+#' getBlock but taking a vector position
+#'
+#' Determine block at position (x,y,z)
+#'
+#' @param pos Vector (x,y,z) of position
+#' @param include_style A logical value of whether the block's
+#'    style should also be included in the output (defaults to TRUE).
+#'
+#' @return A numeric vector of length one or two with the type ID
+#'    and style, if `include_style` is `TRUE`, of the block
+#'    at position (x, y, z). You can use [find_item()] to
+#'    find the name of the block type based on this returned ID.
+#'
+#' @seealso [miner::getBlock()]
+#'
+#' @examples
+#' \dontrun{
+#' library(miner)
+#' mc_connect()
+#' p <- getPlayerPos()
+#' getBlockV(p + c(0, -1, 0))
+#' }
+#'
+#' @export
+#' @importFrom miner getBlock
+
+getBlockV <- function(pos, include_style=TRUE)
+{
+    stopifnot(length(pos)==3)
+    stopifnot(all(!is.na(pos)))
+
+    miner::getBlock(pos[1], pos[2], pos[3], include_style)
+}
+
+
 #' setBlocks but taking vector positions
 #'
 #' Place a cuboid of blocks of a single type
@@ -67,6 +102,41 @@ setBlocksV <- function(pos0, pos1, id)
 
     miner::setBlocks(pos0[1], pos0[2], pos0[3],
                      pos1[1], pos1[2], pos1[3], id)
+}
+
+
+#' getBlocks but taking vector positions
+#'
+#' Determine blocks within a cuboid
+#'
+#' @param pos0 Vector (x,y,z) of first position
+#' @param pos1 Vector (x,y,z) of second position
+#'
+#' @return An 3-D array of integers where each integer gives the ID of the
+#'    type of a block in the cuboid.
+#'
+#' @seealso [miner::getBlocks()]
+#'
+#' @examples
+#' \dontrun{
+#' library(miner)
+#' mc_connect()
+#' p <- getPlayerPos()
+#' getBlocksV(p - c(0, 1, 0), p - c(0, 5, 0))
+#' }
+#'
+#' @export
+#' @importFrom miner setBlocks
+
+getBlocksV <- function(pos0, pos1)
+{
+    stopifnot(length(pos0)==3)
+    stopifnot(all(!is.na(pos0)))
+    stopifnot(length(pos1)==3)
+    stopifnot(all(!is.na(pos1)))
+
+    miner::getBlocks(pos0[1], pos0[2], pos0[3],
+                     pos1[1], pos1[2], pos1[3])
 }
 
 
