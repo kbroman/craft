@@ -1,3 +1,11 @@
+## Version 0.3.6 (2025-05-20)
+
+### New features
+
+- Moved [miner](https://github.com/kbroman/miner) from `Imports` to
+  `Depends`, so that miner is loaded when craft is loaded.
+
+
 ## Version 0.3.5 (2026-05-16)
 
 ### New features

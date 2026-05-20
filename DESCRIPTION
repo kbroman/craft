@@ -1,7 +1,7 @@
 Package: craft
 Title: Extra Functions to Control Minecraft with RaspberryJuice API
-Version: 0.3.5
-Date: 2025-05-16
+Version: 0.3.6
+Date: 2025-05-20
 Authors@R: c(
     person("Karl",    "Broman",   role = c("aut", "cre"), email = "broman@wisc.edu"),
     person("Brooke",  "Anderson", role="aut"),
@@ -12,8 +12,8 @@ Authors@R: c(
     person("Felix",   "Ling",     role="aut")
     )
 Description: Extra functions to illustrate the use of the miner package to control Minecraft with the RaspberryJuice API.
-Depends: R (>= 3.5.0)
-Imports: miner, Rmaze, igraph, imager, stats
+Depends: R (>= 3.5.0), miner
+Imports: Rmaze, igraph, imager, stats
 Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
 Encoding: UTF-8
