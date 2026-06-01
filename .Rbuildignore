@@ -3,5 +3,5 @@
 ^Makefile$
 ^inst/scripts/.RData$
 ^\.github$
-figure/
+^figure/
 docs/
