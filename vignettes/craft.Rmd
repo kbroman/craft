@@ -215,3 +215,7 @@ Press, 2016)](https://nostarch.com/programwithminecraft),
 ["Adventures in Minecraft" by Martin O'Hanlon and David Whale (Wiley,
 2014)](https://www.wiley.com/en-us/Adventures+in+Minecraft%2C+2nd+Edition-p-9781119439554),
 and some work by Alexander Pruss.
+
+---
+
+[![CC BY](https://i.creativecommons.org/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/3.0/)
